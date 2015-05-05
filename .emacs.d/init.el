@@ -4,3 +4,9 @@
 ;;
 ;; Since 1998-09-XX
 ;;
+
+;;
+;; Japanese Environment
+;;
+(set-language-environment "Japanese")
+(set-default-coding-systems 'utf-8)
