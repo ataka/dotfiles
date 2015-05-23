@@ -55,8 +55,6 @@
 (define-key mode-specific-map "f" 'ffap)
 (define-key mode-specific-map "g" 'grep)
 (define-key mode-specific-map "o" 'occur)
-(define-key mode-specific-map "u" 'browse-url-at-point)
-(define-key mode-specific-map "U" 'quickurl-browse-url-ask)
 (define-key mode-specific-map "y" 'clipboard-yank)
 
 ; C-x prefix
