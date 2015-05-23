@@ -52,6 +52,7 @@
 
 ; C-c prefix
 (define-key mode-specific-map "c" 'compile)
+(define-key mode-specific-map "f" 'ffap)
 (define-key mode-specific-map "g" 'grep)
 (define-key mode-specific-map "o" 'occur)
 (define-key mode-specific-map "u" 'browse-url-at-point)
