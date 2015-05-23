@@ -59,3 +59,15 @@
 
 ; C-x prefix
 (define-key ctl-x-map "f" 'font-lock-mode)
+
+
+;;;;;;;;;;;;;;;;;;;;
+;; Custom Package ;;
+;;;;;;;;;;;;;;;;;;;;
+
+;;
+;; paren
+;;
+(require 'paren)
+(show-paren-mode t)
+(setq show-paren-style 'mixed)
