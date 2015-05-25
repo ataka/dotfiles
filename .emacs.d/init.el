@@ -71,3 +71,44 @@
 (require 'paren)
 (show-paren-mode t)
 (setq show-paren-style 'mixed)
+
+;;
+;; CC-mode
+;;
+(defconst ataka-style
+  '((c-basic-offset         . 2)
+;;    (c-comment-only-line-offset . (0 . 0))
+    (c-offsets-alist        . ((statement-block-intro . +)
+                               (knr-argdecl-intro     . 5)
+                               (substatement-open     . +)
+                               (substatement-label    . 0)
+                               (label                 . 0)
+                               (statement-case-open   . +)
+                               (statement-cont        . +)
+                               (arglist-intro         . c-lineup-arglist-intro-after-paren)
+                               (arglist-close         . c-lineup-arglist)
+                               (inline-open           . 0)
+                               (brace-list-open       . +)
+                               (c                     . c-lineup-C-comments)
+                               ))
+;;    (c-special-indent-hook  . c-gnu-impose-minimum)
+    (c-cleanup-list         . (brace-else-brace
+                               brace-elseif-brace
+                               scope-operator
+                               defun-close-semi))
+    (c-block-comment-prefix . "*")
+    )
+  "My C programing style.")
+
+(add-hook 'c-mode-common-hook
+          '(lambda ()
+             ;; (c-set-style "gnu")
+             (c-add-style "PERSONAL" ataka-style t)
+             (setq tab-width 4
+                   indent-tabs-mode nil
+                   compilation-window-height nil)
+             (c-toggle-auto-hungry-state 1)
+             (define-key c-mode-base-map "\C-m" 'newline-and-indent)
+             ))
+
+
