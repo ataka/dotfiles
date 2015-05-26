@@ -111,4 +111,24 @@
              (define-key c-mode-base-map "\C-m" 'newline-and-indent)
              ))
 
+;;
+;; nxml-mode
+;;
+(eval-after-load "nxml-mode"
+  '(progn
+     (defun my-nxml-insert-tag ()
+       (interactive)
+       (insert "<")
+       (call-interactively 'nxml-complete)
+       (nxml-balanced-close-start-tag-inline))
 
+     (defun my-nxml-insert-paragraph ()
+       (interactive)
+       (insert "<p")
+       (call-interactively 'nxml-balanced-close-start-tag-inline))
+
+     (define-key nxml-mode-map "\M-\C-i"  'nxml-complete)
+     (define-key nxml-mode-map "\C-c\C-e" 'my-nxml-insert-tag)
+     (define-key nxml-mode-map "\C-c\C-p" 'my-nxml-insert-paragraph)
+     (define-key nxml-mode-map "\C-c/"    'nxml-finish-element)
+))
