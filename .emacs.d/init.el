@@ -132,3 +132,40 @@
      (define-key nxml-mode-map "\C-c\C-p" 'my-nxml-insert-paragraph)
      (define-key nxml-mode-map "\C-c/"    'nxml-finish-element)
 ))
+
+;;
+;; quickurl
+;;
+(setq quickurl-url-file "~/.emacs.d/quickurls")
+(define-key mode-specific-map "q" 'quickurl)
+
+(setq quickurl-grab-lookup-function #'quickurl-current-word)
+(defun quickurl-current-word ()
+  (save-excursion
+    (let ((beg (progn (skip-chars-backward "A-Za-z0-9-") (point)))
+	  (end (progn (skip-chars-forward  "A-Za-z0-9-") (point))))
+      (buffer-substring-no-properties beg end))))
+
+(defadvice quickurl-insert (after fold-html-if-available)
+  "Fold inserted url if fold-html-mode is t"
+  (when (and 
+	 (memq major-mode '(nxml-mode sgml-mode xml-mode html-mode yahtml-mode xhtml-mode))
+	 (boundp 'html-fold-mode) html-fold-mode)
+    (html-fold-inline)))
+
+(setq quickurl-format-function #'quickurl-mode-format-function)
+
+(eval-after-load "quickurl"
+  '(progn
+    (defun quickurl-mode-format-function (url-list)
+       (let ((url  (quickurl-url-url         url-list))
+	     (desc (quickurl-url-description url-list)))
+	 (delete-region (point) (search-backward lookup))
+	 (cond
+	  ((memq major-mode '(nxml-mode sgml-mode xml-mode yahtml-mode lisp-interaction-mode))
+	   (format "<a href=\"%s\">%s</a>" url desc))
+	  ((memq major-mode '(rd-mode))
+	   (format "((<%s|URL:%s>))" desc url))
+	  (t url))))
+    (ad-activate 'quickurl-insert)
+))
