@@ -169,3 +169,8 @@
 	  (t url))))
     (ad-activate 'quickurl-insert)
 ))
+
+;;
+;; aspell / ispell
+;;
+(setq ispell-program-name "/usr/local/bin/aspell")
