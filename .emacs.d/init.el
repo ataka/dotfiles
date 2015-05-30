@@ -134,6 +134,11 @@
 ))
 
 ;;
+;; skeleton
+;;
+(load "~/.emacs.d/init-skeleton.el")
+
+;;
 ;; quickurl
 ;;
 (setq quickurl-url-file "~/.emacs.d/quickurls")
