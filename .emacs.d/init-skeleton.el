@@ -17,6 +17,8 @@
   "<h4>" _ "</h4>")
 (define-skeleton nxml-element-h5 "" nil
   "<h5>" _ "</h5>")
+(define-skeleton nxml-element-dfn "" nil
+  "<dfn>" _ "</dfn>")
 (define-skeleton nxml-element-kbd "" nil
   "<kbd>" _ "</kbd>")
 (define-skeleton nxml-element-samp "" nil
@@ -44,6 +46,7 @@
   '(("4" "" nxml-element-h4)
     ("5" "" nxml-element-h5)
     ("k" "" nxml-element-kbd)
+    ("d" "" nxml-element-dfn)
     ("s" "" nxml-element-samp)
     ("c" "" nxml-element-code)
     ("p" "" nxml-element-pre)
