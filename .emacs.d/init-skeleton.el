@@ -29,6 +29,8 @@
   "<pre class=\"sample\">" _ "</pre>")
 (define-skeleton nxml-element-strong "" nil
   "<strong>" _ "</strong>")
+(define-skeleton nxml-element-ruby "" nil
+  "<ruby>" _ "<rp> (</rp><rt></rt><rp>) </rp></ruby>"
 (define-skeleton nxml-element-ul "" nil
   "<ul>\n"
   > "<li>" _ "</li>\n"
@@ -51,6 +53,7 @@
     ("c" "" nxml-element-code)
     ("p" "" nxml-element-pre)
     ("*" "" nxml-element-strong)
+    ("r" "" nxml-element-ruby)
     ("u" "" nxml-element-ul)
     ("o" "" nxml-element-ol)
     ("l" "" nxml-element-li)
