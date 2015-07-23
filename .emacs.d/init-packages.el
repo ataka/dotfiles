@@ -12,3 +12,10 @@
 ;;
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 
+;;
+;; scala-mode2
+;;
+(add-hook 'scala-mode-hook '(lambda ()
+                              (interactive)
+                              (newline-and-indent)
+                              (scala-indent:insert-asterisk-on-multiline-comment)))
