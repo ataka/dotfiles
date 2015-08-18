@@ -13,6 +13,11 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 
 ;;
+;; magit
+;;
+(define-key mode-specific-map "v" 'magit-status)
+
+;;
 ;; scala-mode2
 ;;
 (add-hook 'scala-mode-hook '(lambda ()
