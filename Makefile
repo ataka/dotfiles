@@ -44,6 +44,7 @@ install-cui: install-bat
 	brew install zsh
 	brew install zsh-autosuggestions
 	brew install zsh-completion
+	brew install zsh-git-prompt
 	brew install zsh-syntax-highlighting
 
 .PHONY: install-bat
