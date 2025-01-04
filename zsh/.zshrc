@@ -40,7 +40,11 @@ setopt hist_find_no_dups
 export PS1="%~ $ "
 
 #
-# Zsh Prompt for Apple Terminal
+# Terminal Specified Settings
+# ==============================================================================
+
+#
+# Apple Terminal
 # ------------------------------------------------------------------------------
 #
 # see https://zenn.dev/sprout2000/articles/bd1fac2f3f83bc
@@ -65,35 +69,32 @@ if [ "$TERM_PROGRAM" = "Apple_Termanil" ]; then
   precmd() {
     git_prompt
   }
-fi
 
 #
-# Starship for WezTerm
+# WezTerm
 # ------------------------------------------------------------------------------
 
-if [ "$TERM_PROGRAM" = "WezTerm" ]; then
+elif [ "$TERM_PROGRAM" = "WezTerm" ]; then
   export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
   eval "$(starship init zsh)"
 
   function wezterm-set-active-pane-title() {
     echo "\x1b]1;$@"
   }
-fi
 
 #
-# Starship for Ghostty
+# Ghostty
 # ------------------------------------------------------------------------------
 
-if [ "$TERM_PROGRAM" = "ghostty" ]; then
+elif [ "$TERM_PROGRAM" = "ghostty" ]; then
   export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
   eval "$(starship init zsh)"
-fi
 
 #
-# oh my posh for iTerm 2 and tmux
+# iTerm 2 and tmux
 # ------------------------------------------------------------------------------
 
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ] && [ "$TERM_PROGRAM" != "WezTerm" ] && [ "$TERM_PROGRAM" != "ghostty" ]; then
+else
   eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/powerlevel10k_rainbow.omp.json)"
 fi
 
