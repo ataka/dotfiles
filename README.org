@@ -1,6 +1,13 @@
 
 * ツールの説明と設定
 
+** AeroSpace
+
+- https://github.com/nikitabobko/AeroSpace
+- https://nikitabobko.github.io/AeroSpace/guide
+
+i3 ライクな Window Manager
+
 ** Bat
 
 better =cat=
