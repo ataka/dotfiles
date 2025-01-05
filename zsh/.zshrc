@@ -207,6 +207,8 @@ function git-preview-worktree() {
 # Homebrew
 # ------------------------------------------------------------------------------
 export BREW=/opt/homebrew/bin/brew
+# 10 分間は AUTO UPDATE を無効にする
+export HOMEBREW_AUTO_UPDATE_SECS=600
 
 #
 # Rbenv
