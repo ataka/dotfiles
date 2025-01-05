@@ -24,6 +24,7 @@ install-pre:
 
 .PHONE: install-cui
 install-cui: install-bat
+	brew install --cask nikitabobko/tap/aerospace
 	brew install --cask fontforge
 	brew install --cask ghostty
 	brew install --cask karabiner-elements
