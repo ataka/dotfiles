@@ -35,6 +35,7 @@ install-cui: install-bat
 	brew install fd
 	brew install fzf
 	brew install git-delta
+	brew install git-filter-repo
 	brew install nushell
 	brew install screen
 	brew install starship
