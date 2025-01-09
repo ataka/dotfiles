@@ -29,6 +29,7 @@ install-cui: install-bat
 	brew install --cask ghostty
 	brew install --cask karabiner-elements
 	brew install --cask wezterm
+	brew install --formula FelixKratz/formulae/borders
 	brew install --formula jandedobbeleer/oh-my-posh/oh-my-posh
 	brew tap FelixHerrmann/tap
 	brew install swift-package-list

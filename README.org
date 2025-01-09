@@ -73,6 +73,14 @@ ARM 用のアプリは提供されていない?
 
 - =.gitconfig=
 
+** JankyBorders
+
+- https://github.com/FelixKratz/JankyBorders
+
+ウィンドウ枠に色を付けるツール。
+
+コマンド名は =borders=
+
 ** Karabiner Elements
 
 *** Dvorak Layout
