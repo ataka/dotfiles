@@ -7,6 +7,10 @@ all: link
 link:
 	./link.sh
 
+.PHONY: unlink
+unlink:
+	./link.sh --delete
+
 .PHONY: setup
 setup:
 	brew install stow
