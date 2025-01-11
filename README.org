@@ -271,7 +271,7 @@ Ligature に対応した英文フォント。
   - 9 : Strikethrough on
 
 | Color Name     | Foreground Color | Background Color |
-|:---------------|:-----------------|:-----------------|
+|----------------+------------------+------------------|
 | Black          | 30               | 40               |
 | Red            | 31               | 41               |
 | Green          | 32               | 42               |
@@ -294,7 +294,7 @@ Ligature に対応した英文フォント。
 *** Frappe
 
 | Color Name | ANSI    | Bright  | ANSI Name | Bright Name |
-|:-----------|:--------|:--------|:----------|:------------|
+|------------+---------+---------+-----------+-------------+
 | Black      | #51576d | #626880 | surface1  | surface2    |
 | Red        | #e78284 | #e78284 | red       | red         |
 | Green      | #a6d189 | #a6d189 | green     | green       |
@@ -303,4 +303,3 @@ Ligature に対応した英文フォント。
 | Magenta    | #f4b8e4 | #f4b8e4 | pink      | pink        |
 | Cyan       | #81c8be | #81c8be | teal      | teal        |
 | White      | #b5bfe2 | #a5adce | subtext1  | subtext0    |
-
