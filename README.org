@@ -18,6 +18,12 @@ better =cat=
 
 Theme には Catppuccin Frappe を使用しています。
 
+初回のみキャッシュをリビルドしましょう。
+
+#+begin_src
+  bat cache --build
+#+end_src
+
 ** DeskPad
 
 - GitHub: https://github.com/Stengo/DeskPad
