@@ -40,6 +40,7 @@ install-cui: install-bat
 	brew install git-delta
 	brew install git-filter-repo
 	brew install nushell
+	brew install pandoc
 	brew install screen
 	brew install starship
 	brew install tldr
