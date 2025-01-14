@@ -50,7 +50,7 @@ automatically-unhide-macos-hidden-apps = false
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
-preset = 'dvorak'
+preset = 'qwerty' # Kinesis で動かす時は qwerty
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
@@ -60,12 +60,12 @@ preset = 'dvorak'
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 0
-inner.vertical =   0
-outer.left =       0
-outer.bottom =     0
-outer.top =        0
-outer.right =      0
+inner.horizontal = 12
+inner.vertical =   12
+outer.left =       10
+outer.bottom =     10
+outer.top =        10
+outer.right =      10
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -98,14 +98,14 @@ outer.right =      0
 # '''
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-cmd-alt-slash = 'layout tiles horizontal vertical'
-cmd-alt-comma = 'layout accordion horizontal vertical'
+ctrl-alt-shift-slash = 'layout tiles horizontal vertical'
+ctrl-alt-shift-backslash = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-cmd-alt-h = 'focus left'
-cmd-alt-j = 'focus down'
-cmd-alt-k = 'focus up'
-cmd-alt-l = 'focus right'
+alt-shift-h = 'focus left'
+alt-shift-j = 'focus down'
+alt-shift-k = 'focus up'
+alt-shift-l = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 cmd-alt-shift-h = 'move left'
@@ -113,9 +113,10 @@ cmd-alt-shift-j = 'move down'
 cmd-alt-shift-k = 'move up'
 cmd-alt-shift-l = 'move right'
 
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-# alt-shift-minus = 'resize smart -50'
-# alt-shift-equal = 'resize smart +50'
+alt-shift-minus = 'resize smart -50'
+alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-1 = 'workspace 1'
@@ -127,61 +128,17 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
-# cmd-alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
-cmd-alt-b = 'workspace B'
-# cmd-alt-c = 'workspace C' conflicts with Arc
-cmd-alt-d = 'workspace D'
-cmd-alt-e = 'workspace E'
-cmd-alt-f = 'workspace F'
-cmd-alt-g = 'workspace G'
-cmd-alt-i = 'workspace I'
-cmd-alt-m = 'workspace M'
-cmd-alt-n = 'workspace N'
-cmd-alt-o = 'workspace O'
-cmd-alt-p = 'workspace P'
-cmd-alt-q = 'workspace Q'
-cmd-alt-r = 'workspace R'
-# cmd-alt-s = 'workspace S'
-cmd-alt-t = 'workspace T'
-cmd-alt-u = 'workspace U'
-cmd-alt-v = 'workspace V'
-cmd-alt-w = 'workspace W'
-cmd-alt-x = 'workspace X'
-cmd-alt-y = 'workspace Y'
-cmd-alt-z = 'workspace Z'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-5 = 'move-node-to-workspace 5'
-alt-shift-6 = 'move-node-to-workspace 6'
-alt-shift-7 = 'move-node-to-workspace 7'
-alt-shift-8 = 'move-node-to-workspace 8'
-alt-shift-9 = 'move-node-to-workspace 9'
-cmd-alt-shift-a = 'move-node-to-workspace A'
-cmd-alt-shift-b = 'move-node-to-workspace B'
-# cmd-alt-shift-c = 'move-node-to-workspace C' conflicts with Arc
-cmd-alt-shift-d = 'move-node-to-workspace D'
-cmd-alt-shift-e = 'move-node-to-workspace E'
-cmd-alt-shift-f = 'move-node-to-workspace F'
-cmd-alt-shift-g = 'move-node-to-workspace G'
-cmd-alt-shift-i = 'move-node-to-workspace I'
-cmd-alt-shift-m = 'move-node-to-workspace M'
-cmd-alt-shift-n = 'move-node-to-workspace N'
-cmd-alt-shift-o = 'move-node-to-workspace O'
-cmd-alt-shift-p = 'move-node-to-workspace P'
-cmd-alt-shift-q = 'move-node-to-workspace Q'
-cmd-alt-shift-r = 'move-node-to-workspace R'
-cmd-alt-shift-s = 'move-node-to-workspace S'
-cmd-alt-shift-t = 'move-node-to-workspace T'
-cmd-alt-shift-u = 'move-node-to-workspace U'
-cmd-alt-shift-v = 'move-node-to-workspace V'
-cmd-alt-shift-w = 'move-node-to-workspace W'
-cmd-alt-shift-x = 'move-node-to-workspace X'
-cmd-alt-shift-y = 'move-node-to-workspace Y'
-cmd-alt-shift-z = 'move-node-to-workspace Z'
+ctrl-alt-shift-1 = 'move-node-to-workspace 1'
+ctrl-alt-shift-2 = 'move-node-to-workspace 2'
+ctrl-alt-shift-3 = 'move-node-to-workspace 3'
+ctrl-alt-shift-4 = 'move-node-to-workspace 4'
+ctrl-alt-shift-5 = 'move-node-to-workspace 5'
+ctrl-alt-shift-6 = 'move-node-to-workspace 6'
+ctrl-alt-shift-7 = 'move-node-to-workspace 7'
+ctrl-alt-shift-8 = 'move-node-to-workspace 8'
+ctrl-alt-shift-9 = 'move-node-to-workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -299,3 +256,11 @@ shift-w = 'move-node-to-workspace W'
 shift-x = 'move-node-to-workspace X'
 shift-y = 'move-node-to-workspace Y'
 shift-z = 'move-node-to-workspace Z'
+
+[[on-window-detected]]
+  if.app-id = 'com.apple.dt.Xcode'
+  run = 'layout floating'
+
+[[on-window-detected]]
+  if.app-id = 'com.apple.iphonesimulator'
+  run = 'layout floating'
