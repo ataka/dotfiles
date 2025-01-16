@@ -107,6 +107,72 @@ Home Row Mods の設定は https://github.com/Leo-keeb/Karabiner-Elements-Advanc
   ;   q   j   k   x      b   m   w   v   ]
 #+end_src
 
+** KMonad
+
+- [[https://tgc54.com/en/post/kmonad-macos/?__readwiseLocation=][Setting up KMonad on macOS]]
+
+*** インストール
+
+#+begin_src 
+  cd ~/project
+
+  git clone --recursive https://github.com/kmonad/kmonad.git
+  cd kmonad
+#+end_src
+
+Karabiner-DriverKit-VirtualHIDDevice のインストール (対話的)
+
+#+begin_src
+  open c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/dist/Karabiner-DriverKit-VirtualHIDDevice-3.1.0.pkg
+#+end_src
+
+Karabiner-DriverKit-VirtualHIDDevice をインストール後に実行する
+
+#+begin_src
+  /Applications/.Karabiner-VirtualHIDDevice-Manager.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Manager activate
+#+end_src
+
+ビルドして ~/.local/bin にインストール
+
+#+begin_src
+  stack build --flag kmonad:dext --extra-include-dirs=c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit:c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include
+#+end_src
+
+Catalina (10.15) からキーイベントのキャプチャーにはシステム設定でパーミッションを与える必要があります。
+「設定 > プライバシーとセキュリティ > プライバシー > 入力監視」から KMonad を実行するアプリを追加してください。
+
+=sudo= を使って起動
+
+#+begin_src
+  sudo ~/.local/bin/kmonad ~/.config/kmonad/foo.kbd
+#+end_src
+
+*** 起動時に KMonad を実行する
+
+#+begin_src plist
+  <?xml version="1.0" encoding="utf-8"?>
+  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+  <plist version="1.0">
+    <dict>
+      <key>Label</key>
+      <string>local.kmonad</string>
+      <key>Program</key>
+      <string>/Users/[user]/.local/bin/kmonad</string>
+      <key>ProgramArguments</key>
+      <array>
+        <string>/Users/[user]/.local/bin/kmonad</string>
+        <string>/Users/[user]/.config/config.kbd</string>
+      </array>
+      <key>RunAtLoad</key>
+      <true />
+      <key>StandardOutPath</key>
+      <string>/tmp/kmonad.stdout</string>
+      <key>StandardErrorPath</key>
+      <string>/tmp/kmonad.stderr</string>
+    </dict>
+  </plist>
+#+end_src
+
 ** GNU Screen
 
 - =.screenrc=
@@ -303,3 +369,23 @@ Ligature に対応した英文フォント。
 | Magenta    | #f4b8e4 | #f4b8e4 | pink      | pink        |
 | Cyan       | #81c8be | #81c8be | teal      | teal        |
 | White      | #b5bfe2 | #a5adce | subtext1  | subtext0    |
+<<<<<<< Updated upstream
+=======
+
+* マイブログ
+
+** Prism.js
+
+JavaScript
+
+#+begin_src xml
+  <script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1/components/prism-core.min.js,npm/prismjs@1/components/prism-bash.min.js,npm/prismjs@1/components/prism-css.min.js,npm/prismjs@1/components/prism-diff.min.js,npm/prismjs@1/components/prism-git.min.js,npm/prismjs@1/components/prism-javascript.min.js,npm/prismjs@1/components/prism-json.min.js,npm/prismjs@1/components/prism-jsonp.min.js,npm/prismjs@1/components/prism-lisp.min.js,npm/prismjs@1/components/prism-markdown.min.js,npm/prismjs@1/components/prism-mermaid.min.js,npm/prismjs@1/components/prism-ruby.min.js,npm/prismjs@1/components/prism-shell-session.min.js,npm/prismjs@1/components/prism-sql.min.js,npm/prismjs@1/components/prism-swift.min.js,npm/prismjs@1/components/prism-toml.min.js,npm/prismjs@1/components/prism-xml-doc.min.js,npm/prismjs@1/components/prism-yaml.min.js,npm/prismjs@1/components/prism-lua.min.js,npm/prismjs@1,npm/prismjs@1/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs@1/plugins/line-highlight/prism-line-highlight.min.js,npm/prismjs@1/plugins/toolbar/prism-toolbar.min.js,npm/prismjs@1/plugins/show-language/prism-show-language.min.js,npm/prismjs@1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js,npm/prismjs@1/plugins/treeview/prism-treeview.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
+#+end_src
+
+CSS
+
+#+begin_src xml
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/prismjs@1/themes/prism.min.css,npm/prismjs@1/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs@1/plugins/line-highlight/prism-line-highlight.min.css,npm/prismjs@1/plugins/toolbar/prism-toolbar.min.css,npm/prismjs@1/plugins/treeview/prism-treeview.min.css"/>
+#+end_src
+>>>>>>> Stashed changes
