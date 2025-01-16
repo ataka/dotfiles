@@ -1,0 +1,34 @@
+;; KMonad Config file -- Home Row Monds on Kinesis Advantage 2 with Dvorak layout
+;;
+;; Masayuki Ataka <masayuki.ataka@gmail.com>
+
+(defcfg
+  input  (iokit-name)
+  output (kext)
+  fallthrough true
+)
+
+(defsrc
+  a o e u i d h t n s
+)
+
+;; met -> Command
+;; alt -> Option
+;; sft -> Shift
+;; ctl -> Control
+
+(defalias
+  met_a (tap-hold-next-release 200 a lmet)
+  sft_o (tap-hold-next-release 200 o lsft)
+  alt_e (tap-hold-next-release 200 e lalt)
+  ctl_u (tap-hold-next-release 200 u lctl)
+
+  ctl_h (tap-hold-next-release 200 h rctl)
+  alt_t (tap-hold-next-release 200 t ralt)
+  sft_n (tap-hold-next-release 200 n rsft)
+  met_s (tap-hold-next-release 200 s rmet)
+)
+
+(deflayer homerowmods
+  @met_a @sft_o @alt_e @ctl_u i d @ctl_h @alt_t @sft_n @met_s
+)
