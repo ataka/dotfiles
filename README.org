@@ -183,6 +183,10 @@ Catalina (10.15) からキーイベントのキャプチャーにはシステム
 
 - =.screenrc=
 
+** SketchyBar
+
+Better メニューバー
+
 ** oh my posh
 
 *** oh my posh のインストール
