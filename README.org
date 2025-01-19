@@ -187,6 +187,18 @@ Catalina (10.15) からキーイベントのキャプチャーにはシステム
 
 Better メニューバー
 
+*** デフォルトのメニューバーを隠す
+
+完全にメニューバーを非表示にする方法はないので、自動表示を「常に」に設定します。
+
+- 設定アプリ > コントロールセンター > 「メニューバーを自動的に表示/非表示」 > 常に
+
+*** SkeychyBar の起動
+
+#+begin_src
+  brew services start sketchybar
+#+end_src
+
 ** oh my posh
 
 *** oh my posh のインストール

@@ -45,6 +45,7 @@ install-cui: install-bat
 	brew install fzf
 	brew install git-delta
 	brew install git-filter-repo
+	brew install jq
 	brew install just
 	brew install nushell
 	brew install pandoc
@@ -74,7 +75,10 @@ install-bat:
 
 .PHONY: install-font
 install-font:
+	brew install --cask font-hack-nerd-font
 	brew install --cask font-jetbrains-mono-nerd-font
+	brew install --cask sf-symbols
+	brew install font-sf-pro
 
 .PHONY: install-programming
 install-programming: install-programming-bash install-programming-lua install-programming-markdown
