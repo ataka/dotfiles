@@ -87,6 +87,12 @@ ARM 用のアプリは提供されていない?
 
 コマンド名は =borders=
 
+** Just
+
+- https://github.com/casey/just
+
+コマンドランナー。
+
 ** Karabiner Elements
 
 *** Dvorak Layout

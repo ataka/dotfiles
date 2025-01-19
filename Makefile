@@ -44,6 +44,7 @@ install-cui: install-bat
 	brew install fzf
 	brew install git-delta
 	brew install git-filter-repo
+	brew install just
 	brew install nushell
 	brew install pandoc
 	brew install screen
