@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # The $SELECTED variable is available for space components and indicates if
 # the space invoking this script (with name: $NAME) is currently selected:
@@ -6,13 +6,13 @@
 
 source "$CONFIG_DIR/colors.sh"
 
-if [ $SELECTED = true ]; then
+if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
   sketchybar --set $NAME background.drawing=on \
                          background.color=$ACCENT_COLOR \
                          label.color=$BAR_COLOR \
                          icon.color=$BAR_COLOR
 else
   sketchybar --set $NAME background.drawing=off \
-                         label.color=$ACCENT_COLOR \
-                         icon.color=$ACCENT_COLOR
+                         label.color=$WHITE \
+                         icon.color=$WHITE
 fi
