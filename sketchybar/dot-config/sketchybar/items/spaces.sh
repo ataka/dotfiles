@@ -7,16 +7,14 @@ do
     sketchybar --add item space.$sid left \
         --subscribe space.$sid aerospace_workspace_change \
         --set space.$sid \
-              icon.padding_right=0 \
-              label.padding_left=0 \
               background.color=$BORDER_COLOR \
               background.corner_radius=5 \
               background.height=20 \
               background.drawing=off \
-              label="$sid" \
               click_script="aerospace workspace $sid" \
               script="$CONFIG_DIR/plugins/space.sh $sid"
 done
+
 #   sketchybar --add item space.$sid left \
 #              --subscribe space.$sid aerospace_workspace_change \
 #              --set space.$sid label=$sid \
