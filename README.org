@@ -183,6 +183,10 @@ Catalina (10.15) からキーイベントのキャプチャーにはシステム
 
 - =.screenrc=
 
+** Serie
+
+Rust 製の git graph ツール
+
 ** SketchyBar
 
 Better メニューバー
