@@ -79,6 +79,12 @@ ARM 用のアプリは提供されていない?
 
 - =.gitconfig=
 
+** Gnuplot
+
+- http://www.gnuplot.info/
+
+ポータブルなグラフ描画ツール
+
 ** JankyBorders
 
 - https://github.com/FelixKratz/JankyBorders

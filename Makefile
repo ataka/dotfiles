@@ -46,6 +46,7 @@ install-cui: install-bat
 	brew install fzf
 	brew install git-delta
 	brew install git-filter-repo
+	brew install gnuplot
 	brew install jq
 	brew install just
 	brew install nushell
