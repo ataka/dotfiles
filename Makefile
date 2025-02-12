@@ -77,7 +77,6 @@ install-bat:
 
 .PHONY: install-font
 install-font:
-	brew tap homebrew/cask-fonts
 	brew install --cask font-hack-nerd-font
 	brew install --cask font-jetbrains-mono-nerd-font
 	brew install --cask font-victor-mono-nerd-font
