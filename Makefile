@@ -59,7 +59,7 @@ install-cui: install-bat
 	brew install zoxide
 	brew install zsh
 	brew install zsh-autosuggestions
-	brew install zsh-completion
+	brew install zsh-completions
 	brew install zsh-git-prompt
 	brew install zsh-syntax-highlighting
 
