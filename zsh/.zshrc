@@ -113,11 +113,10 @@ colors
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 #
-# Zsh Completion
+# Zsh Completions
 # ------------------------------------------------------------------------------
 #
-# $ brew install zsh-completions
-# $ rm -ff ~/.zcompdump; compinit
+# $ rm -f ~/.zcompdump; compinit
 # $ chmod go-w '/opt/homebrew/share'
 # $ chmod -R go-w '/opt/homebrew/share/zsh'
 
