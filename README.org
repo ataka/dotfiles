@@ -15,7 +15,7 @@ better =cat=
 
 *** Theme
 
-- [catppuccin/bat: 🦇️ Soothing pastel theme for Bat](https://github.com/catppuccin/bat)
+- [[https://github.com/catppuccin/bat][catppuccin/bat: 🦇️ Soothing pastel theme for Bat]]
 
 Theme には Catppuccin Frappe を使用しています。
 
