@@ -402,8 +402,6 @@ Ligature に対応した英文フォント。
 | Magenta    | #f4b8e4 | #f4b8e4 | pink      | pink        |
 | Cyan       | #81c8be | #81c8be | teal      | teal        |
 | White      | #b5bfe2 | #a5adce | subtext1  | subtext0    |
-<<<<<<< Updated upstream
-=======
 
 * マイブログ
 
@@ -421,4 +419,3 @@ CSS
 #+begin_src xml
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/prismjs@1/themes/prism.min.css,npm/prismjs@1/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs@1/plugins/line-highlight/prism-line-highlight.min.css,npm/prismjs@1/plugins/toolbar/prism-toolbar.min.css,npm/prismjs@1/plugins/treeview/prism-treeview.min.css"/>
 #+end_src
->>>>>>> Stashed changes
