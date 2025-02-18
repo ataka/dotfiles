@@ -80,6 +80,18 @@ ARM 用のアプリは提供されていない?
   brew install fzf
 #+end_src
 
+** [[https://github.com/ghostty-org/ghostty][Ghostty]]
+
+=ZIG= 言語で書かれたターミナル
+
+*** インストール後の権限
+
+#+begin_quote
+Warning: Your terminal does not have App Management permissions, so Homebrew will delete and reinstall the app.
+This may result in some configurations (like notification settings or location in the Dock/Launchpad) being lost.
+To fix this, go to System Settings > Privacy & Security > App Management and add or enable your terminal.
+#+end_quote
+
 ** Git
 
 - =.gitconfig=
