@@ -44,6 +44,7 @@ install-cui: install-bat
 	brew install eza
 	brew install fd
 	brew install fzf
+	brew install fastfetch
 	brew install git-delta
 	brew install git-filter-repo
 	brew install gnuplot

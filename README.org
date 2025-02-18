@@ -51,6 +51,10 @@ Better =ls=
   brew install eza
 #+end_src
 
+** [[https://github.com/fastfetch-cli/fastfetch][Fastfetch]]
+
+システム情報取得ツール。Neofetch の後継。
+
 ** Fontforge
 
 フォントを編集するアプリ。
