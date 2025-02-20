@@ -116,6 +116,27 @@ To fix this, go to System Settings > Privacy & Security > App Management and add
 
 コマンドランナー。
 
+*** 補完機能の追加
+
+- https://github.com/casey/just/issues/223
+
+=~/.zsh/completion/_just= に次のファイルを置きます。
+
+#+begin_src shell
+  #compdef _just just
+  #autoload
+
+  _just () {
+      local -a subcmds
+
+      subcmds=($(just --summary))
+
+      _describe 'command' subcmds
+  }
+
+  _just "$@"
+#+end_src
+
 ** Karabiner Elements
 
 *** Dvorak Layout
