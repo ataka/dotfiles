@@ -2,3 +2,5 @@
 .DS_Store
 .dir-locals.el
 .editorconfig
+Gemfile.local
+Gemfile.local.lock
