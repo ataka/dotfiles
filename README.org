@@ -102,6 +102,10 @@ To fix this, go to System Settings > Privacy & Security > App Management and add
 
 ポータブルなグラフ描画ツール
 
+** [[https://imagemagick.org/index.php][ImageMagick]]
+
+多採な画像操作ツール
+
 ** JankyBorders
 
 - https://github.com/FelixKratz/JankyBorders
