@@ -460,3 +460,9 @@ CSS
 #+begin_src xml
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/prismjs@1/themes/prism.min.css,npm/prismjs@1/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs@1/plugins/line-highlight/prism-line-highlight.min.css,npm/prismjs@1/plugins/toolbar/prism-toolbar.min.css,npm/prismjs@1/plugins/treeview/prism-treeview.min.css"/>
 #+end_src
+
+* 同僚etc.が使っているアプリ
+
+** [[https://code.visualstudio.com/][Visual Studio Code]]
+
+Microsoft が開発しているマルチプラットフォームな IDE

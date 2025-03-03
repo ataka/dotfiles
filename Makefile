@@ -102,3 +102,11 @@ install-programming-lua:
 .PHONY: install-programming-markdown
 install-programming-markdown:
 	brew install markdown
+
+#
+# 同僚etc.が使っているアプリ; 同僚らのサポート用に...
+# ------------------------------------------------------------------------------
+
+.PHONY: install-for-support
+install-for-support:
+	brew install --cask visual-studio-code
