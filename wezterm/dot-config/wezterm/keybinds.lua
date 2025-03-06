@@ -30,6 +30,9 @@ return {
     { key = 'O', mods = 'LEADER', action = act.ActivatePaneDirection('Prev') },
     { key = 'Tab', mods = 'ALT', action = act.ActivatePaneDirection('Next') },
     { key = 'Tab', mods = 'SHIFT|ALT', action = act.ActivatePaneDirection('Prev') },
+    -- Scroll to Prompt - https://wezterm.org/config/lua/keyassignment/ScrollToPrompt.html#scrolltoprompt
+    { key = 'UpArrow', mods = 'SHIFT', action = act.ScrollToPrompt(-1) },
+    { key = 'DownArrow', mods = 'SHIFT', action = act.ScrollToPrompt(1) },
     -- オリジナル設定
     { key = 'Enter', mods = 'ALT', action = act.ToggleFullScreen },
     { key = '!', mods = 'CTRL', action = act.ActivateTab(0) },
