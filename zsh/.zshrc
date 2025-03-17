@@ -291,6 +291,8 @@ if type fzf &>/dev/null; then
          --color header:italic
          --header 'Press CTRL-Y to copy command into clipboard'"
 
+  bindkey '^L' fzf-history-widget # overwrite clean-screen
+
   if type eza &>/dev/null; then
     export FZF_ALT_C_OPTS="
            --walker-skip .git,node_modules,target
