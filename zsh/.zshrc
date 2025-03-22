@@ -217,6 +217,7 @@ fi
 function git-preview-branch() {
   git branch | \
     fzf --height 60% \
+        --multi \
         --preview="echo {} | \
                    sed -e 's/^.//' | \
                    xargs git log --graph --color=always --format=format:'%C(cyan)%ar %C(yellow)%an %C(white)%s'" | \
@@ -226,6 +227,7 @@ function git-preview-branch() {
 function git-preview-branch-all() {
   git branch --all | \
     fzf --height 60% \
+        --multi \
         --preview="echo {} | \
                    sed -e 's/^.//' | \
                    xargs git log --graph --color=always --format=format:'%C(cyan)%ar %C(yellow)%an %C(white)%s'" | \
@@ -237,6 +239,7 @@ function git-preview-worktree() {
   git worktree list | \
     fzf --height 60% \
         --bind 'ctrl-/:change-preview-window(down|hidden|)' \
+        --multi \
         --preview="echo {3} && \
                    echo '---' && \
                    echo {3} | \
