@@ -4,3 +4,4 @@
 .editorconfig
 Gemfile.local
 Gemfile.local.lock
+secrets.plist
