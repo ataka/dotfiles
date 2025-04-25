@@ -131,8 +131,6 @@ alt-4 = 'workspace 4'
 alt-5 = 'workspace 5'
 alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
-alt-8 = 'workspace 8'
-alt-9 = 'workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 cmd-alt-shift-1 = 'move-node-to-workspace 1'
@@ -142,8 +140,6 @@ cmd-alt-shift-4 = 'move-node-to-workspace 4'
 cmd-alt-shift-5 = 'move-node-to-workspace 5'
 cmd-alt-shift-6 = 'move-node-to-workspace 6'
 cmd-alt-shift-7 = 'move-node-to-workspace 7'
-cmd-alt-shift-8 = 'move-node-to-workspace 8'
-cmd-alt-shift-9 = 'move-node-to-workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -209,8 +205,6 @@ equal = 'resize smart +50'
 5 = 'workspace 5'
 6 = 'workspace 6'
 7 = 'workspace 7'
-8 = 'workspace 8'
-9 = 'workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 shift-1 = 'move-node-to-workspace 1'
@@ -220,8 +214,6 @@ shift-4 = 'move-node-to-workspace 4'
 shift-5 = 'move-node-to-workspace 5'
 shift-6 = 'move-node-to-workspace 6'
 shift-7 = 'move-node-to-workspace 7'
-shift-8 = 'move-node-to-workspace 8'
-shift-9 = 'move-node-to-workspace 9'
 
 [[on-window-detected]]
   if.app-id = 'com.apple.dt.Xcode'
