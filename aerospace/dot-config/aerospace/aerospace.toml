@@ -236,10 +236,10 @@ k = 'focus up'
 l = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
-shift-h = 'move left'
-shift-j = 'move down'
-shift-k = 'move up'
-shift-l = 'move right'
+alt-h = 'move left'
+alt-j = 'move down'
+alt-k = 'move up'
+alt-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 minus = 'resize smart -50'
