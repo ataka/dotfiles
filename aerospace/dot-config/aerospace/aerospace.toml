@@ -173,6 +173,22 @@ r = ['flatten-workspace-tree', 'mode main'] # reset layout
 f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
+# See: https://nikitabobko.github.io/AeroSpace/commands#layout
+slash = 'layout accordion horizontal vertical'
+comma = 'layout tiles horizontal vertical'
+
+# See: https://nikitabobko.github.io/AeroSpace/commands#focus
+h = 'focus left'
+j = 'focus down'
+k = 'focus up'
+l = 'focus right'
+
+# See: https://nikitabobko.github.io/AeroSpace/commands#move
+alt-h = 'move left'
+alt-j = 'move down'
+alt-k = 'move up'
+alt-l = 'move right'
+
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
 #s = ['layout sticky tiling', 'mode main']
 
