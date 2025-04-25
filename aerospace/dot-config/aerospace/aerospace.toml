@@ -197,6 +197,27 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+# See: https://nikitabobko.github.io/AeroSpace/commands#resize
+minus = 'resize smart -50'
+equal = 'resize smart +50'
+
+1 = 'workspace 1'
+2 = 'workspace 2'
+3 = 'workspace 3'
+4 = 'workspace 4'
+5 = 'workspace 5'
+6 = 'workspace 6'
+7 = 'workspace 7'
+
+# See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
+shift-1 = 'move-node-to-workspace 1'
+shift-2 = 'move-node-to-workspace 2'
+shift-3 = 'move-node-to-workspace 3'
+shift-4 = 'move-node-to-workspace 4'
+shift-5 = 'move-node-to-workspace 5'
+shift-6 = 'move-node-to-workspace 6'
+shift-7 = 'move-node-to-workspace 7'
+
 down = 'volume down'
 up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
