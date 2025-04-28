@@ -1,0 +1,34 @@
+;; KMonad Config file -- Home Row Mods on Internal Keyborad with Dvorak software layout
+;;
+;; Masayuki Ataka <masayuki.ataka@gmail.com>
+
+(defcfg
+  input  (iokit-name)
+  output (kext)
+  fallthrough true
+)
+
+(defsrc
+ capslock a s d f g h j k l ;
+)
+
+;; met -> Command
+;; alt -> Option
+;; sft -> Shift
+;; ctl -> Control
+
+(defalias
+  met_a (tap-hold-next-release 200 a lmet)
+  sft_s (tap-hold-next-release 200 s lsft)
+  alt_d (tap-hold-next-release 200 d lalt)
+  ctl_f (tap-hold-next-release 200 f lctl)
+
+  ctl_j (tap-hold-next-release 200 j lctl)
+  alt_k (tap-hold-next-release 200 k lalt)
+  sft_l (tap-hold-next-release 200 l lsft)
+  met_; (tap-hold-next-release 200 - lmet)
+)
+
+(deflayer homerowmods
+  lctl @met_a @sft_s @alt_d @ctl_f g h @ctl_j @alt_k @sft_l @met_;
+)
