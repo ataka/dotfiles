@@ -233,6 +233,16 @@ Catalina (10.15) からキーイベントのキャプチャーにはシステム
   </plist>
 #+end_src
 
+*** 作成した kbd ファイル
+
+| ファイル名                               | 対象キーボード            | Layout | IM | メモ              |
+|------------------------------------------+---------------------------+--------+----+-------------------|
+| なし                                     | Kinesis Advantage 360 Pro | Dvorak | Qw |                   |
+| =home-row-mods=                          | Kinesis Advantage 2       | Dvorak | Qw |                   |
+| =home-row-mods-qwerty=                   | Internal Keyboard         | Qwerty | Dv | 基本利用しない    |
+| =home-row-mods-qwerty-apple=             | Internal Keyboard         | Qwerty | Qw |                   |
+| =home-row-mods-qwerty-apple-space-cadet= | Internal Keyboard         | Qwerty | Qw | Hyper, Super 対応 |
+
 ** GNU Screen
 
 - =.screenrc=
