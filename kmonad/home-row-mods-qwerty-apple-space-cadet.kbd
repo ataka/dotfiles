@@ -1,0 +1,53 @@
+;; KMonad Config file -- Home Row Mods on Internal Keyborad with Qwerty layout
+;;
+;; Masayuki Ataka <masayuki.ataka@gmail.com>
+
+(defcfg
+  input  (iokit-name)
+  output (kext)
+  fallthrough true
+)
+
+(defsrc
+                             - =
+          q w e r t  y u i o p [ ]
+ capslock a s d f g  h j k l ; '
+          z x c v b  n m , . /
+)
+
+;; met -> command
+;; alt -> option
+;; sft -> shift
+;; ctl -> control
+
+;; hyp -> hyper
+;; sup -> super
+
+(defalias
+  hyp_' (tap-hold-next-release 200 ' rctl)
+  sup_, (tap-hold-next-release 200 , ralt)
+  alt_. (tap-hold-next-release 200 . lalt)
+  ctl_p (tap-hold-next-release 200 p lctl)
+
+  ctl_g (tap-hold-next-release 200 g lctl)
+  alt_c (tap-hold-next-release 200 c lalt)
+  sup_r (tap-hold-next-release 200 r ralt)
+  hyp_l (tap-hold-next-release 200 l rctl)
+
+  met_a (tap-hold-next-release 200 a lmet)
+  sft_o (tap-hold-next-release 200 o lsft)
+  alt_e (tap-hold-next-release 200 e lalt)
+  ctl_u (tap-hold-next-release 200 u lctl)
+
+  ctl_h (tap-hold-next-release 200 h lctl)
+  alt_t (tap-hold-next-release 200 t lalt)
+  sft_n (tap-hold-next-release 200 n lsft)
+  met_s (tap-hold-next-release 200 s lmet)
+)
+
+(deflayer homerowmods
+                                                                  [ ]
+       @hyp_' @sup_, @alt_. @ctl_p y  f @ctl_g @alt_c @sup_r @hyp_l / =
+  lctl @met_a @sft_o @alt_e @ctl_u i  d @ctl_h @alt_t @sft_n @met_s -
+            ;      q      j      k x  b      m      w      v      z
+)
