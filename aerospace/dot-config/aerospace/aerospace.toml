@@ -55,7 +55,12 @@ automatically-unhide-macos-hidden-apps = false
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
-preset = 'qwerty' # Kinesis で動かす時は qwerty
+# Kinesis Advantage Pro 360 -> qwerty
+# Kinesis Advantage 2 + kmonad home-row-mods-qwerty -> qwerty
+# Apple Internal Keyboard + kmonad home-row-mods-qwerty-apple -> qwerty
+# Apple Internal Keyboard + kmonad home-row-mods-qwerty + Dvorak IME -> dvorak
+preset = 'qwerty'
+# preset = 'dvorak'
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
