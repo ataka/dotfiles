@@ -96,17 +96,20 @@ To fix this, go to System Settings > Privacy & Security > App Management and add
 
 - =.gitconfig=
 
-** [[https://www.homerow.app/][HomeRow]]
 
-Clickable な要素にキーボードショートカットを用意するツール。
 
-Homebrew 版は用意されていません。
 
 ** Gnuplot
 
 - http://www.gnuplot.info/
 
 ポータブルなグラフ描画ツール
+
+** [[https://www.homerow.app/][HomeRow]]
+
+Clickable な要素にキーボードショートカットを用意するツール。
+
+Homebrew 版は用意されていません。
 
 ** [[https://imagemagick.org/index.php][ImageMagick]]
 
