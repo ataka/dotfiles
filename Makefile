@@ -51,6 +51,7 @@ install-cui: install-bat
 	brew install --cask nikitabobko/tap/aerospace
 	brew install --cask fontforge
 	brew install --cask ghostty
+	brew install --cask github-copilot-for-xcode
 	brew install --cask karabiner-elements
 	brew install --cask wezterm
 	brew install --formula FelixKratz/formulae/borders

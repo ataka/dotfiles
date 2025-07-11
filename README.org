@@ -96,8 +96,40 @@ To fix this, go to System Settings > Privacy & Security > App Management and add
 
 - =.gitconfig=
 
+** GitHub Copilot
 
+*** GitHub Copilot for Xcode
 
+**** 初期設定
+
+1. GitHub Copilot for Xcode を開く
+2. アクセシビリティ機能へのアクセス許可を与える
+   - 「システム設定 > プライバシーとセキュリティ > アクセシビリティ」から =GitHub Copilot for Xcode Extension= を許可する
+3. 歯車マークをクリックして、設定画面を開く
+   - 「システム設定 > ログイン項目と機能拡張」から =Xcode Source Editor= で =GitHub Copilot for Xcode Extension= を許可する
+4. GitHub Copilot for Xcode に戻り、サインインする
+   - GitHub への Activation 画面が開くので、その通り実行する
+
+**** 使い方
+
+- =TAB= 提案されたコードを受け入れる
+- =Option= 複数行の提案を表示する
+
+**** 自前のキーカスタマイズ
+
+- =Ctrl + [= Previous Suggestion
+- =Ctrl + ]= Next Suggestion
+- =Ctrl + {= Open chat in GitHub Copilot for Xcode
+
+*** GitHub Copilot for Emacs
+
+see README.org in =.emacs.d=
+
+*** GitHub Copilot for VSCode
+
+1. 画面左のサイドバーから「拡張機能」をクリック
+2. 「GitHub Copilot」 (と欲しければ「GitHub Copilot Chat」) をインストール
+3. 画面右下の GitHub アイコンから「Sign in to use Copilot」を実行
 
 ** Gnuplot
 
