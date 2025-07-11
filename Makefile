@@ -20,11 +20,31 @@ setup:
 # ============================================================
 
 .PHONY: install
-install: install-pre install-cui install-font install-programming
+install: install-pre install-emacs-requires install-cui install-font install-programming
 
 .PHONY: install-pre
 install-pre:
 	brew install wget
+
+# https://github.com/d12frosted/homebrew-emacs-plus/blob/master/Formula/emacs-plus%4031.rb
+.PHONY: install-emacs-requires
+install-emacs-requires:
+	brew install autoconf
+	brew install automake
+	brew install gcc
+	brew install gmp
+	brew install gnutls
+	brew install libgccjit
+	brew install librsvg
+	brew install mailutils
+	brew install pkgconf
+	brew install sqlite
+	brew install texinfo
+	brew install tree-sitter
+	brew install webp
+	brew install jpeg-turbo
+	brew install dbus
+	brew install little-cms2
 
 .PHONE: install-cui
 install-cui: install-bat
