@@ -176,11 +176,13 @@ cmd-alt-shift-s = 'mode service'
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
-backspace = ['close-all-windows-but-current', 'mode main']
+backspace = ['mode main']
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 slash = 'layout accordion horizontal vertical'
-comma = 'layout tiles horizontal vertical'
+backslash = 'layout tiles horizontal vertical'
+a = 'layout accordion horizontal vertical'
+t = 'layout tiles horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 h = 'focus left'
