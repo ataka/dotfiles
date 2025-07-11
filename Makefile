@@ -102,6 +102,7 @@ install-bat:
 install-font:
 	brew install --cask font-hack-nerd-font
 	brew install --cask font-jetbrains-mono-nerd-font
+	brew install --cask font-noto-serif-hentaigana
 	brew install --cask font-victor-mono-nerd-font
 	brew install --cask sf-symbols
 	brew install font-sf-pro
