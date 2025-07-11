@@ -61,6 +61,7 @@ install-cui: install-bat
 	brew tap FelixHerrmann/tap
 	brew install swift-package-list
 	brew install atuin
+	brew install cmake
 	brew install deskpad
 	brew install eza
 	brew install fd
