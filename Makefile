@@ -73,6 +73,7 @@ install-cui: install-bat
 	brew install jq
 	brew install just
 	brew install mas
+	brew install meetingbar
 	brew install nushell
 	brew install pandoc
 	brew install screen
