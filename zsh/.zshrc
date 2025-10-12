@@ -248,6 +248,56 @@ function git-preview-worktree() {
     awk '{print $1}'
 }
 
+function git-preview-worktree-create-dir() {
+  local full_dir=$(pwd)
+  local work_dir=${full_dir:t}
+  local dir_prefix=
+  if [[ $work_dir =~ ([A-Za-z0-9]+)_([A-Za-z0-9]+) ]]; then
+    dir_prefix=$match[1]_$match[2]
+  elif [[ $work_dir =~ ([-A-Za-z0-9]+) ]]; then
+    dir_prefix=$match[1]
+  else
+    dir_prefix=$work_dir
+  fi
+
+  local branch=$(git-preview-branch-all | xargs echo)
+  local ticket_num
+  local description
+  if [[ $branch =~ ([A-Z]+-[0-9]+)_(.+) ]]; then
+    ticket_num=$match[1]
+    description=$match[2]
+  else
+    echo "Unexpected branch name:" $branch
+    exit 1
+  fi
+
+  local dir_name=${dir_prefix}-${ticket_num}_${description}
+  local dir=../$dir_name
+
+  echo git worktree add $dir $branch
+  git worktree add $dir $branch
+}
+
+function git-preview-worktree-create-dir-and-branch() {
+  echo -n "チケット番号 (eg. CIEL-100): "
+  read ticket_num_raw
+  local ticket_num=$(echo $ticket_num_raw)
+
+  echo -n "ブランチの説明を - 区切りで: "
+  read description_raw
+  local description=$(echo $description_raw)
+
+  local this_repository=$(git remote get-url origin)
+  local repository_name=$(basename -s .git $this_repository)
+
+  local branch=feature/${ticket_num}_${description}
+  local dir_name=${repository_name}-${ticket_num}_${description}
+  local dir=../$dir_name
+
+  echo git worktree add $dir -b $branch
+  git worktree add $dir -b $branch
+}
+
 #
 # Homebrew
 # ------------------------------------------------------------------------------
