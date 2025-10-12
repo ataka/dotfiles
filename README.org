@@ -184,6 +184,16 @@ Homebrew 版は用意されていません。
 
 ** Karabiner Elements
 
+KMonad と相性が悪いので Makefile からインストール・スクリプトを消します。
+
+*** Install
+
+インストールする場合は下記コマンドを実行します。
+
+#+begin_src
+  brew install --cask karabiner-elements
+#+end_src
+
 *** Dvorak Layout
 
 #+begin_src
@@ -208,6 +218,20 @@ Home Row Mods の設定は https://github.com/Leo-keeb/Karabiner-Elements-Advanc
 
 *** インストール
 
+Karabiner-Elements が入っているなら、事前に Karabiner-Elements をアンインストールしておきます。
+
+#+begin_src
+  brew uninstall --cask karabiner-elements
+#+end_src
+
+必要なパッケージをインストールします。
+
+#+begin_src
+  make install-kmonad
+#+end_src
+
+KMonad を取得します。
+
 #+begin_src 
   cd ~/project
 
@@ -215,31 +239,45 @@ Home Row Mods の設定は https://github.com/Leo-keeb/Karabiner-Elements-Advanc
   cd kmonad
 #+end_src
 
-Karabiner-DriverKit-VirtualHIDDevice のインストール (対話的)
+Karabiner-DriverKit-VirtualHIDDevice をインストール (対話的) します
 
 #+begin_src
-  open c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/dist/Karabiner-DriverKit-VirtualHIDDevice-3.1.0.pkg
+  open c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/dist/Karabiner-DriverKit-VirtualHIDDevice-5.0.0.pkg
 #+end_src
 
-Karabiner-DriverKit-VirtualHIDDevice をインストール後に実行する
+Karabiner-DriverKit-VirtualHIDDevice をインストール後に Activate (対話的) します
 
 #+begin_src
   /Applications/.Karabiner-VirtualHIDDevice-Manager.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Manager activate
 #+end_src
 
-ビルドして ~/.local/bin にインストール
+「設定 > 一般 > ログイン項目と機能拡張 > 機能拡張 > ドライバ機能拡張」から =org.pqrs.Karabiner-DriverKit-VirtualHIDDevice= をオンにします。
+
+Daemon を起動します。
 
 #+begin_src
-  stack build --flag kmonad:dext --extra-include-dirs=c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit:c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include
+sudo '/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/Applications/Karabiner-VirtualHIDDevice-Daemon.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Daemon'
+#+end_src
+
+Daemon 起動は kmonad 実行前に必須?
+
+ビルドして ~/.local/bin にインストールします。
+
+#+begin_src
+  stack install --flag kmonad:dext
 #+end_src
 
 Catalina (10.15) からキーイベントのキャプチャーにはシステム設定でパーミッションを与える必要があります。
-「設定 > プライバシーとセキュリティ > プライバシー > 入力監視」から KMonad を実行するアプリを追加してください。
+「設定 > プライバシーとセキュリティ > プライバシー > 入力監視」から KMonad を実行するアプリ (=~/.local/bin/kmonad=) を追加します。
 
-=sudo= を使って起動
+Finder で隠しフォルダーを表示するには =Command + Shift + .= を使います。
+
+*** KMonad を実行する
+
+=sudo= を使って起動します
 
 #+begin_src
-  sudo ~/.local/bin/kmonad ~/.config/kmonad/foo.kbd
+  sudo ~/.local/bin/kmonad ~/project/dotfiles/kmonad/foo.kbd
 #+end_src
 
 *** 起動時に KMonad を実行する
@@ -264,6 +302,27 @@ Catalina (10.15) からキーイベントのキャプチャーにはシステム
       <string>/tmp/kmonad.stdout</string>
       <key>StandardErrorPath</key>
       <string>/tmp/kmonad.stderr</string>
+    </dict>
+  </plist>
+#+end_src
+
+*** 起動時に DText Daemon を実行する
+
+#+begin_src plist
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+  <plist version="1.0">
+    <dict>
+      <key>Label</key>
+      <string>org.pqrs.service.daemon.Karabiner-VirtualHIDDevice-Daemon</string>
+      <key>KeepAlive</key>
+      <true/>
+      <key>ProcessType</key>
+      <string>Interactive</string>
+      <key>ProgramArguments</key>
+      <array>
+        <string>/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/Applications/Karabiner-VirtualHIDDevice-Daemon.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Daemon</string>
+      </array>
     </dict>
   </plist>
 #+end_src

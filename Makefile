@@ -51,8 +51,8 @@ install-cui: install-bat
 	brew install --cask nikitabobko/tap/aerospace
 	brew install --cask fontforge
 	brew install --cask ghostty
-	brew install --cask github-copilot-for-xcode
-	brew install --cask karabiner-elements
+#	brew install --cask karabiner-elements
+	brew install --cask keycastr
 	brew install --cask wezterm
 	brew install --formula FelixKratz/formulae/borders
 	brew install --formula FelixKratz/formulae/sketchybar
@@ -127,6 +127,10 @@ install-programming-lua:
 .PHONY: install-programming-markdown
 install-programming-markdown:
 	brew install markdown
+
+.PHONY: install-kmonad
+install-kmonad:
+	brew install haskell-stack
 
 #
 # 同僚etc.が使っているアプリ; 同僚らのサポート用に...
