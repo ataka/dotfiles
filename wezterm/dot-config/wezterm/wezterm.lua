@@ -30,8 +30,20 @@ config.font_size = 12.0
 config.color_scheme = 'Catppuccin Frappe'
 
 -- 背景の透過
-config.window_background_opacity = 0.90
+local opacity_active = 0.90
+local opacity_inactive = 0.80
+config.window_background_opacity = opacity_inactive
 config.macos_window_background_blur = 5
+
+wezterm.on('window-focus-changed', function(window, _)
+  local overrides = window:get_config_overrides() or {}
+  if window:is_focused() then
+    overrides.window_background_opacity = opacity_active
+  else
+    overrides.window_background_opacity = opacity_inactive
+  end
+  window:set_config_overrides(overrides)
+end)
 
 -- タブバー
 -- タイトルバーを非表示
