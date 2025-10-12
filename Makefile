@@ -139,3 +139,11 @@ install-kmonad:
 .PHONY: install-for-support
 install-for-support:
 	brew install --cask visual-studio-code
+
+#
+# 過去に使っていたアプリ
+# ------------------------------------------------------------------------------
+
+.PHONE: install-archived
+install-archived:
+	brew install --cask karabiner-elements
