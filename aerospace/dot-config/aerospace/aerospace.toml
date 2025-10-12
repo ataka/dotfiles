@@ -120,6 +120,9 @@ outer.right =      10
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 cmd-alt-shift-backslash = 'layout tiles horizontal vertical'
 cmd-alt-shift-slash = 'layout accordion horizontal vertical'
+cmd-alt-shift-a = 'layout accordion horizontal vertical'
+cmd-alt-shift-t = 'layout tiles horizontal vertical'
+
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-shift-h = 'focus left'
@@ -167,7 +170,7 @@ cmd-h = [] # Disable "hide application"
 cmd-alt-h = [] # Disable "hide others"
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
-cmd-alt-shift-a = 'mode aerospace-specified'
+cmd-alt-shift-b = 'mode aerospace-specified'
 cmd-alt-shift-s = 'mode service'
 
 # 'service' binding mode declaration.
