@@ -119,8 +119,8 @@ read_only_style = "fg:fg_directory bg:bg_directory"
   "Pictures" = " "
   "Logseq" = "󱔘 "
   "/project" = "/ "
-  "/Mobile Documents" = " "
-  "/iCloud~com~apple~Playgrounds" = " "
+  "/Mobile Documents" = "/ "
+  "/iCloud~com~apple~Playgrounds" = "/ /"
 
 [git_branch]
 format = '[ $symbol$branch(:$remote_branch) ]($style)'
