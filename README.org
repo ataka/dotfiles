@@ -327,6 +327,32 @@ Finder で隠しフォルダーを表示するには =Command + Shift + .= を�
   </plist>
 #+end_src
 
+*** KMonad を適用するキーボードを限定する
+
+#+begin_src
+  (defcfg
+    input  (iokit-name "キーボードのデバイス名")
+    output (kext)
+    fallthrough true
+  )
+#+end_src
+
+キーボードのデバイス名は =list-keyboards= コマンドで取得できます。
+
+#+begin_src
+  ❯ ./list-keyboards
+  Apple Internal Keyboard / Trackpad
+  Karabiner DriverKit VirtualHIDKeyboard 1.8.0
+#+end_src
+
+=list-keyboards= コマンドは kmonad リポジトリー内で作成します。
+
+#+begin_src
+  cd ~/project/kmonad
+  cd c_src/mac
+  make
+#+end_src
+
 *** 作成した kbd ファイル
 
 | ファイル名                               | 対象キーボード            | Layout | IM | メモ              |
