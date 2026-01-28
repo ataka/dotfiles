@@ -467,7 +467,7 @@ npm install -g @mermaid-js/mermaid-cli
 次の Rakefile を用意しておくと、ビルドが楽になります。
 
 #+begin_src ruby
-  PLANTUML = "/opt/homebrew/bin/plantuml"
+  # frozen_string_literal: true
 
   task :default => :uml
 
@@ -477,7 +477,11 @@ npm install -g @mermaid-js/mermaid-cli
   ]
 
   rule '.png' => '.mmdc' do |t|
-    sh "mmdc -i #{t.source} -o #{t.name}"
+    sh "mmdc --input #{t.source} --output #{t.name} --scale 4"
+  end
+
+  rule '.svg' => '.mmdc' do |t|
+    sh "mmdc --input #{t.source} --output #{t.name}"
   end
 #+end_src
 
@@ -498,6 +502,8 @@ brew install plantuml
 次の Rakefile を用意しておくと、ビルドが楽になります。
 
 #+begin_src ruby
+  # frozen_string_literal: true
+
   PLANTUML = "/opt/homebrew/bin/plantuml"
 
   task :default => :uml
@@ -508,7 +514,11 @@ brew install plantuml
   ]
 
   rule '.png' => '.plantuml' do |t|
-    sh "#{PLANTUML} #{t.source}"
+    sh "#{PLANTUML} -Pteoz=true #{t.source}"
+  end
+
+  rule '-simple.plantuml' => '.plantuml' do |t|
+    sh "sed -e \"s/' hide members/hide members/g\" #{t.source} > #{t.name}"
   end
 #+end_src
 
