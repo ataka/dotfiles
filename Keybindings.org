@@ -2,60 +2,91 @@
 
 * Global Keybindings
 
-** ==Control==
+** =Control=
 
 
-** ==Option==
+** =Option=
 
-| Key           | Feature      | App     |
-|---------------+--------------+---------|
-| ==⌥ + Space== | Raycast 起動 | Raycast |
-|               |              |         |
+| Key       | Feature      | App     |
+|-----------+--------------+---------|
+| =⌥ Space= | Raycast 起動 | Raycast |
+|           |              |         |
 
-** ==Cmmand==
+** =Cmmand=
 
-| Key           | Feature  | App    |
-|---------------+----------+--------|
-| ==⌘ + Space== | IME 切替 | System |
-|               |          |        |
+| Key       | Feature  | App    |
+|-----------+----------+--------|
+| =⌘ Space= | IME 切替 | System |
+|           |          |        |
 
-** ==Control + Shift==
+** =Control + Shift=
 
-| Key           | Feature                        | App   |
-|---------------+--------------------------------+-------|
-| ==⌃ + ⇧ + y== | Maccy (Clipboard History) 起動 | Maccy |
+| Key     | Feature                        | App   |
+|---------+--------------------------------+-------|
+| =⌃ ⇧ y= | Maccy (Clipboard History) 起動 | Maccy |
 
 
-** ==Control + Option==
+** =Control + Option=
 
-** ==Control + Command==
+| Key         | Feature              | App    |
+|-------------+----------------------+--------|
+| =⌃ ⌥ Space= | Spotlight を起動する | System |
+|             |                      |        |
 
-** ==Option + Shift==
 
-| Key               | Feature                          | App       |
-|-------------------+----------------------------------+-----------|
-| ==⌥ + ⇧ + h==     | ウィンドウ・フォーカスを左に移す | Aerospace |
-| ==⌥ + ⇧ + j==     | ウィンドウ・フォーカスを下に移す | Aerospace |
-| ==⌥ + ⇧ + k==     | ウィンドウ・フォーカスを上に移す | Aerospace |
-| ==⌥ + ⇧ + l==     | ウィンドウ・フォーカスを右に移す | Aerospace |
-| ==⌥ + ⇧ + Space== | HomeRow 起動                     | HomeRow   |
-|                   |                                  |           |
+** =Control + Command=
 
-** ==Option + Command==
+| Key     | Feature                    | App       |
+|---------+----------------------------+-----------|
+| =⌃ ⌘ p= | クイックアクセスを起動する | 1Password |
+| =⌃ ⌘ n= | Search Notes               | Raycast   |
+| =⌃ ⌘ t= | Start/Stop Toggl           | Raycast   |
+| =⌃ ⌘ y= | Clipboard History 起動     | Raycast   |
+|         |                            |           |
 
-** ==Shift + Command==
+** =Option + Shift=
 
-| Key           | Feature                | App     |
-|---------------+------------------------+---------|
-| ==⇧ + ⌘ + y== | Clipboard History 起動 | Raycast |
-|               |                        |         |
+| Key         | Feature                          | App        |
+|-------------+----------------------------------+------------|
+| =⌥ ⇧ h=     | ウィンドウ・フォーカスを左に移す | Aerospace  |
+| =⌥ ⇧ j=     | ウィンドウ・フォーカスを下に移す | Aerospace  |
+| =⌥ ⇧ k=     | ウィンドウ・フォーカスを上に移す | Aerospace  |
+| =⌥ ⇧ l=     | ウィンドウ・フォーカスを右に移す | Aerospace  |
+| =⌥ ⇧ m=     | ミーティングを開く               | MeetingBar |
+| =⌥ ⇧ n=     | 通知センターを表示               | System     |
+| =⌥ ⇧ Space= | HomeRow 起動                     | HomeRow    |
+| =⌥ ⇧ /=     | HomeRow Searchモード             | HomeRow    |
+|             |                                  |            |
 
-** ==Option + Shift + Command==
+** =Option + Command=
 
-| Key               | Feature                           | App      |
-|-------------------+-----------------------------------+----------|
-| ==⌥ + ⇧ + ⌘ + y== | PastePal (Clipboard History) 起動 | PastePal |
-|                   |                                   |          |
+| Key         | Feature                           | App    |
+|-------------+-----------------------------------+--------|
+| =⌥ ⌘ Space= | Finder の検索ウィンドウを表示する | System |
+
+
+** =Shift + Command=
+
+| Key     | Feature                                | App    |
+|---------+----------------------------------------+--------|
+| =⇧ ⌘ 3= | 画面のピクチャをファイルとして保存     | System |
+| =⇧ ⌘ 4= | 選択部分のピクチャをファイルとして保存 | System |
+| =⇧ ⌘ 5= | スクリーンショットと収録のオプション   | System |
+
+** =Control + Shift + Command=
+
+| Key       | Feature                                    | App    |
+|-----------+--------------------------------------------+--------|
+| =⌃ ⇧ ⌘ 3= | 画面のピクチャをクリップボードにコピー     | System |
+| =⌃ ⇧ ⌘ 4= | 選択部分のピクチャをクリップボードにコピー | System |
+
+
+** =Option + Shift + Command=
+
+| Key       | Feature                           | App      |
+|-----------+-----------------------------------+----------|
+| =⌥ ⇧ ⌘ y= | PastePal (Clipboard History) 起動 | PastePal |
+|           |                                   |          |
 
 * Application Specified Keybindings
 
@@ -63,40 +94,51 @@
 
 Control + Command
 
-| Key           | Feature       | Type |
-|---------------+---------------+------|
-| ==⌃ + ⌘ + '== | Bookmark Line | Edit |
-|               |               |      |
+| Key     | Feature       | Type |
+|---------+---------------+------|
+| =⌃ ⌘ '= | Bookmark Line | Edit |
+|         |               |      |
 
 Control + Shift + Command
 
-| Key               | Feature            | Type |
-|-------------------+--------------------+------|
-| ==⌃ + ⇧ + ⌘ + c== | Copy Symbol Name   | Edit |
-| ==⌃ + ⇧ + ⌘ + h== | Find Call Hierachy | Find |
+| Key       | Feature            | Type |
+|-----------+--------------------+------|
+| =⌃ ⇧ ⌘ a= | Authors            |      |
+| =⌃ ⇧ ⌘ c= | Copy Symbol Name   | Edit |
+| =⌃ ⇧ ⌘ h= | Find Call Hierachy | Find |
 
 Control + Option + Shiftt + Command
 
-| Key                   | Feature                    | Type |
-|-----------------------+----------------------------+------|
-| ==⌃ + ⌥ + ⇧ + ⌘ + c== | Copy Qualified Symbol Name | Edit |
+| Key         | Feature                    | Type |
+|-------------+----------------------------+------|
+| =⌃ ⌥ ⇧ ⌘ c= | Copy Qualified Symbol Name | Edit |
 
 
 ** Vivaldi
 
-Shift + Command
+=Command=
 
-| Key           | Feature            | Type                  |
-|---------------+--------------------+-----------------------|
-| ==⇧ + ⌘ + k== | GhostText 編集開始 | Extension - GhostText |
-|               |                    |                       |
+| Key   | Feature    | Type |
+|-------+------------+------|
+| =⌘ [= | 履歴を戻る | Page |
+| =⌘ ]= | 履歴を進む | Page |
+|       |            |      |
+
+
+=Shift + Command=
+
+| Key     | Feature            | Type                  |
+|---------+--------------------+-----------------------|
+| =⇧ ⌘ k= | GhostText 編集開始 | Extension - GhostText |
+|         |                    |                       |
+
 
 
 * Misc
 
-+ ==⌘== : Command
-+ ==⇧== : Shift
-+ ==⌥== : Option
-+ ==⌃== : Control
++ =⌘= : Command
++ =⇧= : Shift
++ =⌥= : Option
++ =⌃= : Control
 
 
