@@ -263,19 +263,28 @@ function git-preview-worktree-create-dir() {
   local branch=$(git-preview-branch-all | xargs echo)
   local ticket_num
   local description
-  if [[ $branch =~ ([A-Z]+-[0-9]+)_(.+) ]]; then
+  if [[ $branch =~ ([A-Z]+-[0-9]+)_(.+) ]]; then # branch -> feature/JIRA-123_desc
     ticket_num=$match[1]
     description=$match[2]
+
+    local dir_name=${dir_prefix}-${ticket_num}_${description} # REPO-JIRA-123_desc
+    local dir=../$dir_name
+
+    echo git worktree add $dir $branch
+    git worktree add $dir $branch
+  elif [[ $branch =~ ([a-z]+)/(.+) ]]; then # branch -> support/desc
+    branch_prefix=$match[1]
+    description=$match[2]
+
+    local dir_name=${dir_prefix}-${branch_prefix}_${description} # REPO-support_desc
+    local dir=../$dir_name
+
+    echo git worktree add $dir $branch
+    git worktree add $dir $branch
   else
     echo "Unexpected branch name:" $branch
     exit 1
   fi
-
-  local dir_name=${dir_prefix}-${ticket_num}_${description}
-  local dir=../$dir_name
-
-  echo git worktree add $dir $branch
-  git worktree add $dir $branch
 }
 
 function git-preview-worktree-create-dir-and-branch() {
