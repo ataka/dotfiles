@@ -198,8 +198,8 @@ KMonad と相性が悪いので Makefile からインストール・スクリプ
 
 #+begin_src
   '   ,   .   p   y      f   g   c   r   l
-  a   o   e   u   u      d   h   t   n   s
-  ;   q   j   k   x      b   m   w   v   ]
+  a   o   e   u   i      d   h   t   n   s
+  ;   q   j   k   x      b   m   w   v   z
 #+end_src
 
 *** Home Row Mods
@@ -209,7 +209,7 @@ Home Row Mods の設定は https://github.com/Leo-keeb/Karabiner-Elements-Advanc
 #+begin_src
   '   ,   .   p   y      f   g   c   r   l
   Cmd Sft Opt Ctl i      d   Ctl Opt Sft Cmd
-  ;   q   j   k   x      b   m   w   v   ]
+  ;   q   j   k   x      b   m   w   v   z
 #+end_src
 
 ** KMonad
