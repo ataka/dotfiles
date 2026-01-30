@@ -190,7 +190,7 @@ fi
 #
 # Emacs
 # ------------------------------------------------------------------------------
-emacs_dir=$HOME/project/emacs-2024
+emacs_dir=$HOME/project/emacs-build
 alias emacs="open $emacs_dir/nextstep/Emacs.app/"
 export GIT_EDITOR="$emacs_dir/lib-src/emacsclient"
 
