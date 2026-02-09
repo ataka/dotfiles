@@ -83,10 +83,11 @@
 
 ** =Option + Shift + Command=
 
-| Key       | Feature                           | App      |
-|-----------+-----------------------------------+----------|
-| =⌥ ⇧ ⌘ y= | PastePal (Clipboard History) 起動 | PastePal |
-|           |                                   |          |
+| Key           | Feature                           | App       |
+|---------------+-----------------------------------+-----------|
+| =⌥ ⇧ ⌘ Space= | Mouseless overlay 起動            | Mouseless |
+| =⌥ ⇧ ⌘ m=     | Mouseless free mode 起動          | Mouseless |
+| =⌥ ⇧ ⌘ y=     | PastePal (Clipboard History) 起動 | PastePal  |
 
 * Application Specified Keybindings
 
