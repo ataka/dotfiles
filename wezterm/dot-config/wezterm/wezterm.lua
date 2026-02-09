@@ -30,8 +30,8 @@ config.font_size = 12.0
 config.color_scheme = 'Catppuccin Frappe'
 
 -- 背景の透過
-local opacity_active = 0.90
-local opacity_inactive = 0.80
+local opacity_active = 1.0
+local opacity_inactive = 0.90
 config.window_background_opacity = opacity_inactive
 config.macos_window_background_blur = 5
 
