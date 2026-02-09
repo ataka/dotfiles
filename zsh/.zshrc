@@ -192,6 +192,7 @@ fi
 # ------------------------------------------------------------------------------
 emacs_dir=$HOME/project/emacs-build
 alias emacs="open $emacs_dir/nextstep/Emacs.app/"
+export EDITOR="$emacs_dir/lib-src/emacsclient"
 export GIT_EDITOR="$emacs_dir/lib-src/emacsclient"
 
 #
