@@ -53,6 +53,7 @@ install-cui: install-bat
 	brew install --cask ghostty
 #	brew install --cask karabiner-elements
 	brew install --cask keycastr
+	brew install --cask mouseless@preview
 	brew install --cask raycast
 	brew install --cask wezterm
 	brew install --formula FelixKratz/formulae/borders
