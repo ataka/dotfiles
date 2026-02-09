@@ -134,6 +134,10 @@ install-programming-markdown:
 install-kmonad:
 	brew install haskell-stack
 
+.PHONY: install-codex
+install-codex:
+	brew install codex
+
 #
 # 同僚etc.が使っているアプリ; 同僚らのサポート用に...
 # ------------------------------------------------------------------------------
