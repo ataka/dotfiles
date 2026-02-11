@@ -142,6 +142,16 @@ install-claude:
 	brew install --cask claude-code
 
 #
+# App Store からインストールするアプリ; mas を使っていインストール
+# ------------------------------------------------------------------------------
+.PHONY: install-via-appstore
+install-via-appstore:
+	mas install 1569813296  # 1Password for Safari
+	mas install 1503446680  # PastePal
+	mas install 1530751461  # Snippety
+
+
+#
 # 同僚etc.が使っているアプリ; 同僚らのサポート用に...
 # ------------------------------------------------------------------------------
 
