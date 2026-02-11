@@ -240,14 +240,14 @@ esc = 'mode main'
 
 1     = ['resize width 1920', 'mode main'] # 1/2
 quote = ['resize width 1280', 'mode main'] # 1/3
-w     = ['resize width 2560', 'mode main'] # 2/3
+comma = ['resize width 2560', 'mode main'] # 2/3
 
 [mode.vertical.binding]
 esc = 'mode main'
 
 1     = ['resize height 1080', 'mode main'] # 1/2
 quote = ['resize height  720', 'mode main'] # 1/3
-w     = ['resize height 1440', 'mode main'] # 2/3
+comma = ['resize height 1440', 'mode main'] # 2/3
 
 [mode.aerospace-specified.binding]
 esc = 'mode main'
