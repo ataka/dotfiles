@@ -9,8 +9,14 @@ stow $argv --dotfiles --target ~ aerospace atuin bat git jankyborders karabiner 
 # ~/Library/Developer/Xcode に置く設定ファイル
 stow $argv --target ~/Library/Developer/Xcode Xcode
 
+#
+# 下記のファイルは symlink を使うと設定ファイルを読み込まれないようです:
+#
+
 # MacTcode
-stow $argv --target ~/Library/Containers/jp.mad-p.inputmethod.MacTcode/Data/Library/Application\ Support/MacTcode tcode
+
+cp -p tcode/config.json ~/Library/Containers/jp.mad-p.inputmethod.MacTcode/Data/Library/Application\ Support/MacTcode
 
 # Mouseless
-stow $argv --target ~/Library/Containers/net.sonuscape.mouseless/Data/.mouseless/configs mouseless
+
+cp -p mouseless/config.yaml ~/Library/Containers/net.sonuscape.mouseless/Data/.mouseless/configs
