@@ -137,6 +137,10 @@ install-kmonad:
 install-codex:
 	brew install codex
 
+.PHONY: install-claude
+install-claude:
+	brew install --cask claude-code
+
 #
 # 同僚etc.が使っているアプリ; 同僚らのサポート用に...
 # ------------------------------------------------------------------------------
