@@ -130,6 +130,19 @@ install-programming-lua:
 	brew install lua
 	brew install lua-language-server
 
+.PHONY: install-programming-ruby
+install-programming-ruby:
+	brew install rbenv
+	brew install ruby-build
+
+.PHONE: install-programming-ruby-version
+install-programming-ruby-version:
+	rbenv install 4.0.1
+
+.PHONY: install-programming-ruby-gems
+install-programming-ruby-gems:
+	gem install asciidoctor
+
 .PHONY: install-programming-markdown
 install-programming-markdown:
 	brew install markdown
