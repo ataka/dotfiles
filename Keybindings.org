@@ -91,6 +91,24 @@
 
 * Application Specified Keybindings
 
+** Vivaldi
+
+=Command=
+
+| Key   | Feature    | Type |
+|-------+------------+------|
+| =⌘ [= | 履歴を戻る | Page |
+| =⌘ ]= | 履歴を進む | Page |
+|       |            |      |
+
+=Shift + Command=
+
+| Key     | Feature            | Type                  |
+|---------+--------------------+-----------------------|
+| =⇧ ⌘ k= | GhostText 編集開始 | Extension - GhostText |
+|         |                    |                       |
+
+
 ** Xcode
 
 Control + Command
@@ -113,26 +131,6 @@ Control + Option + Shiftt + Command
 | Key         | Feature                    | Type |
 |-------------+----------------------------+------|
 | =⌃ ⌥ ⇧ ⌘ c= | Copy Qualified Symbol Name | Edit |
-
-
-** Vivaldi
-
-=Command=
-
-| Key   | Feature    | Type |
-|-------+------------+------|
-| =⌘ [= | 履歴を戻る | Page |
-| =⌘ ]= | 履歴を進む | Page |
-|       |            |      |
-
-
-=Shift + Command=
-
-| Key     | Feature            | Type                  |
-|---------+--------------------+-----------------------|
-| =⇧ ⌘ k= | GhostText 編集開始 | Extension - GhostText |
-|         |                    |                       |
-
 
 
 * Misc
