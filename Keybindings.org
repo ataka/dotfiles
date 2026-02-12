@@ -109,6 +109,21 @@
 |         |                    |                       |
 
 
+** WezTerm
+
+=LEADER=
+
+LEADER = =Ctrl q=
+
+=Cmd q= で WezTerm 終了だから間違えやすそうで嫌だなぁ。
+
+| Key        | Feature             | Type |
+|------------+---------------------+------|
+| =LEADER 2= | ペインを上下に分割  | Pane |
+| =LEADER 3= | ペインを左右に分割  | Pane |
+| =LEADER 0= | ペインを 1 つに戻す | Pane |
+
+
 ** Xcode
 
 =Control + Command=
