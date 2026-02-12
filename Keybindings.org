@@ -111,14 +111,14 @@
 
 ** Xcode
 
-Control + Command
+=Control + Command=
 
 | Key     | Feature       | Type |
 |---------+---------------+------|
 | =⌃ ⌘ '= | Bookmark Line | Edit |
 |         |               |      |
 
-Control + Shift + Command
+=Control + Shift + Command=
 
 | Key       | Feature            | Type |
 |-----------+--------------------+------|
@@ -126,7 +126,7 @@ Control + Shift + Command
 | =⌃ ⇧ ⌘ c= | Copy Symbol Name   | Edit |
 | =⌃ ⇧ ⌘ h= | Find Call Hierachy | Find |
 
-Control + Option + Shiftt + Command
+=Control + Option + Shiftt + Command=
 
 | Key         | Feature                    | Type |
 |-------------+----------------------------+------|
