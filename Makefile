@@ -15,6 +15,11 @@ unlink:
 setup:
 	brew install stow
 
+.PHONY: sync
+sync:
+	cp -p ~/Library/Containers/jp.mad-p.inputmethod.MacTcode/Data/Library/Application\ Support/MacTcode/config.json tcode/config.json
+	cp -p ~/Library/Containers/net.sonuscape.mouseless/Data/.mouseless/configs/config.yaml mouseless/config.yaml
+
 #
 # Install
 # ============================================================
