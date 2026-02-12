@@ -279,7 +279,7 @@ keymaps:
     cycle mouse action type: null
     cycle mouse button: null
     decrease overlay opacity: ArrowDown
-    edit config: Cmd+,
+    edit config: Tab
     enter free mode: null
     execute mouse action: Space
     execute mouse move: OptionLeft tap
