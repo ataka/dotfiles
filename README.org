@@ -395,6 +395,37 @@ Better メニューバー
   brew install jandedobbeleer/oh-my-posh/oh-my-posh
 #+end_src
 
+** Vivaldi
+
+*** Quick Command
+
+1. 「現在のタブでリンクを開く」を選択する
+2. コマンドパラメーターに Bookmarklet 相当の JavaScript を貼り付ける
+
+**** Copy URL
+
+#+begin_src javacript
+  javascript:(function(){e = document.createElement('textarea');e.textContent = document.URL;document.body.appendChild(e);e.select();document.execCommand('copy');e.remove();})();if(history.replaceState){history.replaceState({},null,location.href);};
+#+end_src
+
+**** Copy as Markdown
+
+#+begin_src javacript
+  javascript:(function(){e = document.createElement('textarea');e.textContent = '['+document.title +']('+ document.URL+')';document.body.appendChild(e);e.select();document.execCommand('copy');e.remove();})();if(history.replaceState){history.replaceState({},null,location.href);};
+#+end_src
+
+**** Copy as Plain Text
+
+#+begin_src javacript
+  javascript:(function(){e = document.createElement('textarea');e.textContent = '- '+document.title +'\n'+ document.URL;document.body.appendChild(e);e.select();document.execCommand('copy');e.remove();})();if(history.replaceState){history.replaceState({},null,location.href);};
+#+end_src
+
+**** Copy as Org
+
+#+begin_src javacript
+  javascript:(function(){e = document.createElement('textarea');e.textContent = '[['+document.URL +']['+ document.title+']]';document.body.appendChild(e);e.select();document.execCommand('copy');e.remove();})();if(history.replaceState){history.replaceState({},null,location.href);};
+#+end_src
+
 ** WezTerm
 
 *** WezTerm のインストール
