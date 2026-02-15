@@ -49,8 +49,8 @@ grid_configs:
   strategy: subgrid
   subgrid_dims:
   - 8
-  - 4
-  subgrid_mouse_action_keys: 1234 7890 ',.P GCRL AOEU HTNS ;QJK MWVZ
+  - 3
+  subgrid_mouse_action_keys: 1234 7890 ',.P GCRL ;QJK MWVZ
 keyboard_layout:
   id: com.apple.keylayout.ABC
   name: ABC
