@@ -15,6 +15,15 @@ unlink:
 setup:
 	brew install stow
 
+
+#
+# 下記のファイルは symlink を使うと設定ファイルを読み込まれないようです:
+#
+.PHONY: copy
+copy:
+	cp -p tcode/config.json ~/Library/Containers/jp.mad-p.inputmethod.MacTcode/Data/Library/Application\ Support/MacTcode
+	cp -p mouseless/config.yaml ~/Library/Containers/net.sonuscape.mouseless/Data/.mouseless/configs
+
 .PHONY: sync
 sync:
 	cp -p ~/Library/Containers/jp.mad-p.inputmethod.MacTcode/Data/Library/Application\ Support/MacTcode/config.json tcode/config.json
