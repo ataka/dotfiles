@@ -181,6 +181,12 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ==============================================================================
 
 #
+# Common
+# - Claude
+# ------------------------------------------------------------------------------
+export PATH=$HOME/.local/bin:$PATH
+
+#
 # Bat
 # ------------------------------------------------------------------------------
 if type bat &>/dev/null; then
