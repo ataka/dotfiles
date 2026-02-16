@@ -166,7 +166,7 @@ install-codex:
 
 .PHONY: install-claude
 install-claude:
-	brew install --cask claude-code
+	curl -fsSL https://claude.ai/install.sh | bash
 
 #
 # App Store からインストールするアプリ; mas を使っていインストール
