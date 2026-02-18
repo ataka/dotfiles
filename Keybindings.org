@@ -48,15 +48,15 @@
 
 | Key         | Feature                          | App        |
 |-------------+----------------------------------+------------|
+| =⌥ ⇧ Space= | HomeRow 起動                     | HomeRow    |
 | =⌥ ⇧ h=     | ウィンドウ・フォーカスを左に移す | Aerospace  |
 | =⌥ ⇧ j=     | ウィンドウ・フォーカスを下に移す | Aerospace  |
 | =⌥ ⇧ k=     | ウィンドウ・フォーカスを上に移す | Aerospace  |
 | =⌥ ⇧ l=     | ウィンドウ・フォーカスを右に移す | Aerospace  |
 | =⌥ ⇧ m=     | ミーティングを開く               | MeetingBar |
 | =⌥ ⇧ n=     | 通知センターを表示               | System     |
-| =⌥ ⇧ Space= | HomeRow 起動                     | HomeRow    |
-| =⌥ ⇧ /=     | HomeRow Searchモード             | HomeRow    |
-|             |                                  |            |
+| =⌥ ⇧ s=     | HomeRow Searchモード             | HomeRow    |
+| =⌥ ⇧ v=     | HomeRow Scrollモード             | HomeRow    |
 
 ** =Option + Command=
 
@@ -90,6 +90,17 @@
 | =⌥ ⇧ ⌘ y=     | PastePal (Clipboard History) 起動 | PastePal  |
 
 * Application Specified Keybindings
+
+** HomeRow
+
+*** Scroll Mode
+
+| Key | Feature        | Type |
+|-----+----------------+------|
+| =j= | 下へスクロール |      |
+| =k= | 上へスクロール |      |
+| =h= | 左へスクロール |      |
+| =l= | 右へスクロール |      |
 
 ** Vivaldi
 
