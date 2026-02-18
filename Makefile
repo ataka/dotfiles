@@ -168,6 +168,10 @@ install-codex:
 install-claude:
 	curl -fsSL https://claude.ai/install.sh | bash
 
+.PHONY: install-claued-acp
+install-claude-acp:
+	npm install -g @zed-industries/claude-code-acp
+
 #
 # App Store からインストールするアプリ; mas を使っていインストール
 # ------------------------------------------------------------------------------
