@@ -160,9 +160,17 @@ install-programming-markdown:
 install-kmonad:
 	brew install haskell-stack
 
+#
+# AI 関連
+# ------------------------------------------------------------------------------
+
 .PHONY: install-codex
 install-codex:
 	brew install codex
+
+.PHONY: install-codex-acp
+install-codex-acp:
+	npm install -g @zed-industries/codex-acp
 
 .PHONY: install-claude
 install-claude:
