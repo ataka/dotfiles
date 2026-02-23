@@ -170,7 +170,7 @@ install-claude:
 
 .PHONY: install-claued-acp
 install-claude-acp:
-	npm install -g @zed-industries/claude-code-acp
+	npm install -g @zed-industries/claude-agent-acp
 
 #
 # App Store からインストールするアプリ; mas を使っていインストール
