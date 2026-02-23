@@ -303,3 +303,15 @@ shift-7 = 'move-node-to-workspace 7'
 [[on-window-detected]]
   if.app-id = 'com.apple.iphonesimulator'
   run = 'layout floating'
+
+[[on-window-detected]]
+  if.app-id = 'com.electron.logseq'
+  run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+  if.app-id = 'com.elegate.WaveLink'
+  run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+  if.app-id = 'com.loupedeck.loupedeckApp'
+  run = 'move-node-to-workspace 5'
