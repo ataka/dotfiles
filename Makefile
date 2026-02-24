@@ -77,6 +77,7 @@ install-cui: install-bat
 	brew install swift-package-list
 	brew install atuin
 	brew install cmake
+	brew install coreutils
 	brew install deskpad
 	brew install eza
 	brew install fd
