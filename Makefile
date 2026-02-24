@@ -83,9 +83,11 @@ install-cui: install-bat
 	brew install fd
 	brew install fzf
 	brew install fastfetch
+	brew install gh
 	brew install git-delta
 	brew install git-filter-repo
 	brew install gnuplot
+	brew install haskell-stack
 	brew install imagemagick
 	brew install jq
 	brew install just
@@ -93,6 +95,7 @@ install-cui: install-bat
 	brew install meetingbar
 	brew install nushell
 	brew install pandoc
+	brew install ripgrep
 	brew install screen
 	brew install starship
 	brew install tldr
