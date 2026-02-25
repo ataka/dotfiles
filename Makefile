@@ -13,8 +13,9 @@ unlink:
 
 .PHONY: setup
 setup:
+	brew install gnu-m4
 	brew install stow
-
+	brew install unison
 
 #
 # 下記のファイルは symlink を使うと設定ファイルを読み込まれないようです:
