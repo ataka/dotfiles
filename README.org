@@ -9,6 +9,16 @@
 
 i3 ライクな Window Manager
 
+*** Mission Control のサムネイルが小さくなる問題
+
+Mission Control を起動するとアプリのサムネイルがとても小さく表示される不具合があります。
+
+次のコマンドを打つと解決します。
+
+#+begin_src
+  defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
+#+end_src
+
 ** Bat
 
 better =cat=
