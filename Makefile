@@ -92,6 +92,8 @@ install-cui: install-bat
 	brew install imagemagick
 	brew install jq
 	brew install just
+	brew tap laishulu/homebrew
+	brew install macism
 	brew install mas
 	brew install meetingbar
 	brew install nushell
