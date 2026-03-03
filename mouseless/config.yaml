@@ -43,9 +43,9 @@ grid_configs:
     keys: ''
     num_cells_x: 2
     num_cells_y: 1
-  hold_subgrid_key_for_nudge: false
+  hold_subgrid_key_for_nudge: true
   name: position_based_16_9
-  nudges_per_cell: 4
+  nudges_per_cell: 8
   strategy: subgrid
   subgrid_dims:
   - 8
@@ -320,17 +320,17 @@ keymaps:
     right mouse button (w/o overlay): null
     show overlay: Cmd+Shift+Opt+Space tap
     subgrid nudge down:
-    - D
-    - K
+    - G
+    - .
     subgrid nudge left:
-    - S
-    - J
-    subgrid nudge right:
     - F
-    - L
+    - P
+    subgrid nudge right:
+    - R
+    - Y
     subgrid nudge up:
-    - E
-    - I
+    - C
+    - ','
     switch monitor left: ShiftLeft tap
     switch monitor right: ShiftRight tap
     toggle app enabled: null
