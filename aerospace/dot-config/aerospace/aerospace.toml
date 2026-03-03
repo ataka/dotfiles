@@ -245,6 +245,13 @@ esc = 'mode main'
 4 = ['resize width 2560', 'mode main'] # 2/3
 5 = ['resize width 2880', 'mode main'] # 3/4
 
+# 1512 -- Internal Display
+6 = ['resize width  378', 'mode main'] # 1/4
+7 = ['resize width  504', 'mode main'] # 1/3
+8 = ['resize width  756', 'mode main'] # 1/2
+9 = ['resize width 1008', 'mode main'] # 2/3
+0 = ['resize width 1134', 'mode main'] # 3/4
+
 [mode.vertical.binding]
 esc = 'mode main'
 
@@ -254,6 +261,13 @@ esc = 'mode main'
 3 = ['resize height 1080', 'mode main'] # 1/2
 4 = ['resize height 1440', 'mode main'] # 2/3
 5 = ['resize height 1620', 'mode main'] # 3/4
+
+#  982 -- Internal Display
+6 = ['resize width   245', 'mode main'] # 1/4
+7 = ['resize width   327', 'mode main'] # 1/3
+8 = ['resize width   491', 'mode main'] # 1/2
+9 = ['resize width   654', 'mode main'] # 2/3
+0 = ['resize width   735', 'mode main'] # 3/4
 
 
 [mode.aerospace-specified.binding]
