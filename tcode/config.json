@@ -68,8 +68,7 @@
     "cancelPeriod" : 1.5,
     "excludedApplications" : [
       "com.apple.loginwindow",
-      "com.apple.SecurityAgent",
-      "org.gnu.Emacs"
+      "com.apple.SecurityAgent"
     ],
     "disableOneYomiApplications" : [
       "com.google.Chrome"
