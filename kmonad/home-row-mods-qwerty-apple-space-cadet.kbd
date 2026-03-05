@@ -25,15 +25,17 @@
 ;; sup -> super
 
 (defalias
-  hyp_' (tap-hold-next-release 200 ' rctl)
-  sup_, (tap-hold-next-release 200 , ralt)
-  alt_. (tap-hold-next-release 200 . lalt)
-  ctl_p (tap-hold-next-release 200 p lctl)
+  met_' (tap-hold-next-release 200 ' rmet)
+  hyp_, (tap-hold-next-release 200 , ralt)
+  sup_. (tap-hold-next-release 200 . rctl)
+  alt_p (tap-hold-next-release 200 p lalt)
+  ctl_y (tap-hold-next-release 200 y lctl)
 
-  ctl_g (tap-hold-next-release 200 g lctl)
-  alt_c (tap-hold-next-release 200 c lalt)
-  sup_r (tap-hold-next-release 200 r ralt)
-  hyp_l (tap-hold-next-release 200 l rctl)
+  ctl_f (tap-hold-next-release 200 f lctl)
+  alt_g (tap-hold-next-release 200 g lalt)
+  sup_c (tap-hold-next-release 200 c rctl)
+  hyp_r (tap-hold-next-release 200 r ralt)
+  met_l (tap-hold-next-release 200 l rmet)
 
   met_a (tap-hold-next-release 200 a lmet)
   sft_o (tap-hold-next-release 200 o lsft)
@@ -47,8 +49,8 @@
 )
 
 (deflayer homerowmods
-                                                                  [ ]
-       @hyp_' @sup_, @alt_. @ctl_p y  f @ctl_g @alt_c @sup_r @hyp_l / =
-  lctl @met_a @sft_o @alt_e @ctl_u i  d @ctl_h @alt_t @sft_n @met_s -
-            ;      q      j      k x  b      m      w      v      z
+                                                                            [ ]
+       @met_' @hyp_, @sup_. @alt_p @ctl_y  @ctl_f @alt_g @sup_c @hyp_r @met_l / =
+  lctl @met_a @sft_o @alt_e @ctl_u      i       d @ctl_h @alt_t @sft_n @met_s -
+            ;      q      j      k      x       b      m      w      v      z
 )
