@@ -49,8 +49,8 @@ grid_configs:
   strategy: subgrid
   subgrid_dims:
   - 8
-  - 3
-  subgrid_mouse_action_keys: 1234 7890 ',.P GCRL ;QJK MWVZ
+  - 4
+  subgrid_mouse_action_keys: 1234 7890 ',.P GCRL AOEU HTNS ;QJK MWVZ
 keyboard_layout:
   id: com.apple.keylayout.ABC
   name: ABC
@@ -320,17 +320,17 @@ keymaps:
     right mouse button (w/o overlay): null
     show overlay: Cmd+Shift+Opt+Space tap
     subgrid nudge down:
-    - G
-    - .
+    - T
+    - E
     subgrid nudge left:
-    - F
-    - P
+    - H
+    - O
     subgrid nudge right:
     - R
     - Y
     subgrid nudge up:
     - C
-    - ','
+    - '>'
     switch monitor left: ShiftLeft tap
     switch monitor right: ShiftRight tap
     toggle app enabled: null
