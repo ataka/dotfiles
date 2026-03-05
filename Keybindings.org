@@ -161,9 +161,12 @@ LEADER = =Ctrl q=
 
 * Misc
 
-+ =⌘= : Command
-+ =⇧= : Shift
-+ =⌥= : Option
 + =⌃= : Control
-
++ =⌥= : Option
++ =A= : Alt
++ =M= : Meta
++ =⇧= : Shift
++ =⌘= : Command
++ =s= : Super
++ =H= : Hyper
 
