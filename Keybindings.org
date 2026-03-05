@@ -1,5 +1,7 @@
 #+startup: num
 
+順序: Control -> Option -> Shift -> Command -> Super -> Hyper
+
 * Global Keybindings
 
 ** =Control=
@@ -38,11 +40,11 @@
 
 | Key     | Feature                    | App       |
 |---------+----------------------------+-----------|
-| =⌃ ⌘ p= | クイックアクセスを起動する | 1Password |
+| =⌃ ⌘ m= | Search Menu Items          | Raycast   |
 | =⌃ ⌘ n= | Search Notes               | Raycast   |
+| =⌃ ⌘ p= | クイックアクセスを起動する | 1Password |
 | =⌃ ⌘ t= | Start/Stop Toggl           | Raycast   |
 | =⌃ ⌘ y= | Clipboard History 起動     | Raycast   |
-|         |                            |           |
 
 ** =Option + Shift=
 
@@ -63,6 +65,7 @@
 | Key         | Feature                           | App    |
 |-------------+-----------------------------------+--------|
 | =⌥ ⌘ Space= | Finder の検索ウィンドウを表示する | System |
+| =⌥ ⌘ d=     | Dock の表示・非表示をトグルする   | System |
 
 
 ** =Shift + Command=
@@ -79,7 +82,6 @@
 |-----------+--------------------------------------------+--------|
 | =⌃ ⇧ ⌘ 3= | 画面のピクチャをクリップボードにコピー     | System |
 | =⌃ ⇧ ⌘ 4= | 選択部分のピクチャをクリップボードにコピー | System |
-
 
 ** =Option + Shift + Command=
 
