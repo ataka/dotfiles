@@ -5,3 +5,5 @@
 Gemfile.local
 Gemfile.local.lock
 secrets.plist
+
+**/.claude/settings.local.json
