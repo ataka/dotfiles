@@ -281,8 +281,8 @@ keymaps:
     decrease overlay opacity: ArrowDown
     edit config: Tab
     enter free mode: null
-    execute mouse action: Space
-    execute mouse move: OptionLeft tap
+    execute mouse action: Space tap
+    execute mouse move: OptionLeft double tap
     exit free mode: Escape
     forward click: null
     forward mouse button: Q
@@ -309,14 +309,14 @@ keymaps:
     middle click: null
     middle mouse button: E
     middle mouse button (w/o overlay): null
-    move down: J
+    move down: T
     move left: H
-    move right: L
-    move up: K
+    move right: N
+    move up: C
     release hold/drag: Escape
     repeat last mouse action: null
-    right click: null
-    right mouse button: R
+    right click: Enter tap
+    right mouse button: Enter
     right mouse button (w/o overlay): null
     show overlay: Cmd+Shift+Opt+Space tap
     subgrid nudge down:
@@ -326,27 +326,27 @@ keymaps:
     - H
     - O
     subgrid nudge right:
-    - R
-    - Y
+    - N
+    - U
     subgrid nudge up:
     - C
-    - '>'
+    - .
     switch monitor left: ShiftLeft tap
     switch monitor right: ShiftRight tap
     toggle app enabled: null
     toggle continuous mode: null
     toggle continuous mode until closed: '1'
     toggle free mode:
-    - OptionLeft tap
+    - OptionLeft double tap
     - Cmd+Shift+Opt+m tap
     toggle overlay: null
     toggle overlay lock: null
     undo last key: Backspace
-    wheel down: V
+    wheel down: E
     wheel down fast: null
-    wheel left: U
+    wheel left: O
     wheel left fast: null
-    wheel right: R
+    wheel right: U
     wheel right fast: null
     wheel step down: null
     wheel step down large: null
@@ -356,7 +356,7 @@ keymaps:
     wheel step right large: null
     wheel step up: null
     wheel step up large: null
-    wheel up: M
+    wheel up: .
     wheel up fast: null
   name: mac
 monitor_assignment_mode: auto
