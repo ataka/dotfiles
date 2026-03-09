@@ -43,7 +43,7 @@ grid_configs:
     keys: ''
     num_cells_x: 2
     num_cells_y: 1
-  hold_subgrid_key_for_nudge: true
+  hold_subgrid_key_for_nudge: false
   name: position_based_16_9
   nudges_per_cell: 8
   strategy: subgrid
