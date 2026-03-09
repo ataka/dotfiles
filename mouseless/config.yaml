@@ -30,14 +30,14 @@ grid_configs:
   grid_defn:
   - border_width: 0.0
     callback: build_cell_strings
-    keys: 1234 ',.P AOEU ;QJK
-    num_cells_x: 4
+    keys: 1234 7890 ',.p gcrl aoeu htns ;qjk mwvz
+    num_cells_x: 8
     num_cells_y: 4
   - border_width: 1.0
     callback: build_cell_strings
-    keys: 7890 GCRL HTNS MWVZ
+    keys: 1234 7890 ',.p gcrl aoeu htns ;qjk mwvz
     num_cells_x: 4
-    num_cells_y: 4
+    num_cells_y: 8
   - border_width: 0.0
     callback: apply_strings_and_subgrid_to_cells
     keys: ''
