@@ -473,10 +473,10 @@ style_configs:
   - 1.0
   - 0.5
   subgrid_text_rgba:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 0.5
+  - 1
+  - 1
+  - 1
+  - 0.1
   text_rgba:
   - 1.0
   - 1.0
