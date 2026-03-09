@@ -281,7 +281,7 @@ keymaps:
     decrease overlay opacity: ArrowDown
     edit config: Tab
     enter free mode: null
-    execute mouse action: Space tap
+    execute mouse action: Space
     execute mouse move: OptionLeft double tap
     exit free mode: Escape
     forward click: null
@@ -315,7 +315,7 @@ keymaps:
     move up: C
     release hold/drag: Escape
     repeat last mouse action: null
-    right click: Enter tap
+    right click: Enter
     right mouse button: Enter
     right mouse button (w/o overlay): null
     show overlay: Cmd+Shift+Opt+Space tap
