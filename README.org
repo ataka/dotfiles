@@ -414,6 +414,12 @@ Better メニューバー
   brew services start sketchybar
 #+end_src
 
+*** SketchyBar 用アイコン
+
+- [[https://github.com/kvndrsslr/sketchybar-app-font][kvndrsslr/sketchybar-app-font: A symbol font for sketchybar, initialized with the symbols from simple-bar]]
+
+
+
 ** oh my posh
 
 *** oh my posh のインストール
