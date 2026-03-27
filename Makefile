@@ -204,6 +204,7 @@ install-via-appstore:
 .PHONY: install-for-support
 install-for-support:
 	brew install --cask visual-studio-code
+	brew install --cask zed
 
 #
 # 過去に使っていたアプリ
