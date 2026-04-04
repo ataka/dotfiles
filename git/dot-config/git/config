@@ -16,3 +16,5 @@
     navigate = true
 [delta "magit-delta"]
     line-numbers = false
+[github]
+    user = ataka
