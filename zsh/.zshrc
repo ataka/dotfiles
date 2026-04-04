@@ -222,24 +222,39 @@ fi
 # ------------------------------------------------------------------------------
 
 function git-preview-branch() {
-  git branch | \
-    fzf --height 60% \
-        --multi \
-        --preview="echo {} | \
-                   sed -e 's/^.//' | \
-                   xargs git log --graph --color=always --format=format:'%C(cyan)%ar %C(yellow)%an %C(white)%s'" | \
-    sed -e 's/^.//'
-}
+  local options_all=false
 
-function git-preview-branch-all() {
-  git branch --all | \
-    fzf --height 60% \
-        --multi \
-        --preview="echo {} | \
-                   sed -e 's/^.//' | \
-                   xargs git log --graph --color=always --format=format:'%C(cyan)%ar %C(yellow)%an %C(white)%s'" | \
-    sed -e 's/^.//' | \
-    sed -e 's#remotes/origin/##'
+  while (( $# > 0 )); do
+    case "$1" in
+      --all)
+        options_all=true
+        shift
+        ;;
+      *)
+        shift
+        break
+        ;;
+    esac
+  done
+
+  if [[ "${options_all}" == true ]]; then
+    git branch --all | \
+      fzf --height 60% \
+          --multi \
+          --preview="echo {} | \
+                 sed -e 's/^.//' | \
+                 xargs git log --graph --color=always --format=format:'%C(cyan)%ar %C(yellow)%an %C(white)%s'" | \
+      sed -e 's/^.//' | \
+      sed -e 's#remotes/origin/##'
+  else
+    git branch | \
+      fzf --height 60% \
+          --multi \
+          --preview="echo {} | \
+                 sed -e 's/^.//' | \
+                 xargs git log --graph --color=always --format=format:'%C(cyan)%ar %C(yellow)%an %C(white)%s'" | \
+      sed -e 's/^.//'
+  fi
 }
 
 function git-preview-worktree() {
@@ -255,63 +270,96 @@ function git-preview-worktree() {
     awk '{print $1}'
 }
 
-function git-preview-worktree-create-dir() {
-  local full_dir=$(pwd)
-  local work_dir=${full_dir:t}
-  local dir_prefix=
-  if [[ $work_dir =~ ([A-Za-z0-9]+)_([A-Za-z0-9]+) ]]; then
-    dir_prefix=$match[1]_$match[2]
-  elif [[ $work_dir =~ ([-A-Za-z0-9]+) ]]; then
-    dir_prefix=$match[1]
+function git-preview-worktree-create() {
+  local change_directory=false
+  local create_new_branch=false
+
+  while (( $# > 0 )); do
+    case "$1" in
+      --change-directory)
+        change_directory=true
+        shift
+        ;;
+      --create-new-branch)
+        create_new_branch=true
+        shift
+        ;;
+      *)
+        shift
+        break
+        ;;
+    esac
+  done
+
+  # Case
+  # 1. has {REPO}_worktrees dir
+  #   a. work_dir = {REPO}
+  #   b. work_dir = {REPO}_worktrees/{JIRA_ID}_{desc}
+  #   c. work_dir = {REPO}_worktrees/{desc}
+  # 2. not has REPO_worktrees dir
+  #   d. work_dir = {REPO}
+  #   e. work_dir = {REPO}_{JIRA_ID}_{desc}
+  #   f. work_dir = {REPO}_{desc}
+  local repo_url=$(git remote get-url origin)
+  local repo_name=$(basename -s .git $repo_url)
+  local worktree_dir_suffix=worktrees
+  local worktree_dir=${repo_name}_${worktree_dir_suffix}
+
+  local branch
+  local ticket_id
+  local desc
+
+  if [[ "${create_new_branch}" == true ]]; then
+    read -r "ticket_id?チケット番号 (eg. JIRA-123): "
+    read -r "desc?ブランチの説明を - 区切りで: "
+
+    branch="feature/${ticket_id}_${desc}"
   else
-    dir_prefix=$work_dir
+    branch=$(git-preview-branch --all | xargs echo)
+
+    # branch = feature/JIRA-123_desc
+    if [[ $branch =~ ([A-Z]+-[0-9]+)_(.+) ]]; then
+      ticket_id=$match[1]
+      desc=$match[2]
+      # branch = support/desc
+    elif [[ $branh =~ ([a-z]+)/(.+) ]]; then
+      desc=$match[2]
+    else
+      echo "Unexpected branch name:" $branch
+      exit 1
+    fi
   fi
 
-  local branch=$(git-preview-branch-all | xargs echo)
-  local ticket_num
-  local description
-  if [[ $branch =~ ([A-Z]+-[0-9]+)_(.+) ]]; then # branch -> feature/JIRA-123_desc
-    ticket_num=$match[1]
-    description=$match[2]
-
-    local dir_name=${dir_prefix}-${ticket_num}_${description} # REPO-JIRA-123_desc
-    local dir=../$dir_name
-
-    echo git worktree add $dir $branch
-    git worktree add $dir $branch
-  elif [[ $branch =~ ([a-z]+)/(.+) ]]; then # branch -> support/desc
-    branch_prefix=$match[1]
-    description=$match[2]
-
-    local dir_name=${dir_prefix}-${branch_prefix}_${description} # REPO-support_desc
-    local dir=../$dir_name
-
-    echo git worktree add $dir $branch
-    git worktree add $dir $branch
+  local dir
+  # current dir -> case a.
+  if [[ -d ../${worktree_dir} && -n ticket_id ]]; then
+    dir=../$worktree_dir/${ticket_id}_${desc}
+  elif [[ -d ../${worktree_dir} ]]; then
+    dir=../$worktree_dir/${desc}
+    # current dir -> case b. or c.
+  elif [[ -d ../../${worktree_dir} && -n ticket_id ]]; then
+    dir=../${ticket_id}_${desc}
+  elif [[ -d ../../${worktree_dir} ]]; then
+    dir=../${ticket_id}_${desc}
+    # current dir -> case d. or e. or f.
+  elif [[ -n $ticket_id ]]; then
+    dir=../${repo_name}_${ticket_id}_${desc}
   else
-    echo "Unexpected branch name:" $branch
-    exit 1
+    dir=../${repo_name}_${desc}
   fi
-}
 
-function git-preview-worktree-create-dir-and-branch() {
-  echo -n "チケット番号 (eg. CIEL-100): "
-  read ticket_num_raw
-  local ticket_num=$(echo $ticket_num_raw)
+  if [[ "${create_new_branch}" == true ]]; then
+    echo "\033[32mgit worktree add ${dir} -b ${branch}\033[0m"
+    git worktree add $dir -b $branch
+  else
+    echo "\033[32mgit worktree add ${dir} ${branch}\033[0m"
+    git worktree add $dir $branch
+  fi
 
-  echo -n "ブランチの説明を - 区切りで: "
-  read description_raw
-  local description=$(echo $description_raw)
-
-  local this_repository=$(git remote get-url origin)
-  local repository_name=$(basename -s .git $this_repository)
-
-  local branch=feature/${ticket_num}_${description}
-  local dir_name=${repository_name}-${ticket_num}_${description}
-  local dir=../$dir_name
-
-  echo git worktree add $dir -b $branch
-  git worktree add $dir -b $branch
+  if [[ "${change_directory}" == true ]]; then
+    echo "\033[32mcd ${dir}\033[0m"
+    cd $dir
+  fi
 }
 
 #
