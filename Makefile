@@ -74,6 +74,7 @@ install-cui: install-bat
 	brew install --formula FelixKratz/formulae/sketchybar
 	brew install --formula jandedobbeleer/oh-my-posh/oh-my-posh
 	brew install --formula lusingander/tap/serie
+	brew install --formula olets/tap/zsh-abbr
 	brew tap FelixHerrmann/tap
 	brew install swift-package-list
 	brew install atuin

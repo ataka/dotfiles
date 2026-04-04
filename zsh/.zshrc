@@ -137,6 +137,18 @@ precmd_functions+=(__prompt_precmd)
 
 
 #
+# Zsh Abbr
+# ------------------------------------------------------------------------------
+
+if [[ -f "/opt/homebrew/share/zsh-abbr/zsh-abbr.zsh" ]]; then
+  source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
+
+  if type brew &>/dev/null; then
+    fpath=($(brew --prefix)/share/zsh-abbr $fpath)
+  fi
+fi
+
+#
 # Zsh Color
 # ------------------------------------------------------------------------------
 
@@ -208,7 +220,10 @@ export GIT_EDITOR="$emacs_dir/lib-src/emacsclient"
 # brew install eza
 # brew install tree
 
-if [ -f "/opt/homebrew/bin/eza" ]; then
+if [[ -f  "/opt/homebrew/share/zsh-abbr/zsh-abbr.zsh" && -f "/opt/homebrew/bin/eza" ]]; then
+  alias ls='eza --group-directories-first --icons --no-user'
+  # see ~/.config/zsh-abbr/user-abbreviations
+elif [[ -f "/opt/homebrew/bin/eza" ]]; then
   alias ls='eza --group-directories-first --icons --no-user'
   alias lt='eza --group-directories-first --icons --no-user --tree '
   alias lt3='eza --git-ignore --group-directories-first --icons --no-user --tree --level=3'

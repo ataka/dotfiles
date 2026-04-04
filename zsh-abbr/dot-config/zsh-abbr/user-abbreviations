@@ -1,0 +1,2 @@
+abbr lt='eza --group-directories-first --icons --no-user --tree '
+abbr lt3='eza --git-ignore --group-directories-first --icons --no-user --tree --level=3'
