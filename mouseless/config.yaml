@@ -269,7 +269,7 @@ keyboard_layout:
 keymaps:
 - entries:
     back click: null
-    back mouse button: W
+    back mouse button: null
     back mouse button (w/o overlay): null
     close UI element: Escape
     cycle click count: null
@@ -281,11 +281,13 @@ keymaps:
     decrease overlay opacity: ArrowDown
     edit config: Tab
     enter free mode: null
-    execute mouse action: Space
+    execute mouse action:
+    - Space
+    - Enter
     execute mouse move: OptionLeft double tap
     exit free mode: Escape
     forward click: null
-    forward mouse button: Q
+    forward mouse button: null
     forward mouse button (w/o overlay): null
     hide overlay: Escape
     hold for back button: null
@@ -294,20 +296,19 @@ keymaps:
     hold for middle button: null
     hold for move: Shift+Tab
     hold for right button: null
-    hold for speed decrease: A
-    hold for speed increase:
-    - S
-    - D
-    - F
+    hold for speed decrease: I
+    hold for speed increase: A
     increase overlay opacity: ArrowUp
     jump to bottom: null
     jump to left edge: null
     jump to right edge: null
     jump to top: null
-    left mouse button: Space
+    left mouse button:
+    - Space
+    - Enter
     left mouse button (w/o overlay): null
     middle click: null
-    middle mouse button: E
+    middle mouse button: null
     middle mouse button (w/o overlay): null
     move down: T
     move left: H
@@ -315,8 +316,12 @@ keymaps:
     move up: C
     release hold/drag: Escape
     repeat last mouse action: null
-    right click: Enter
-    right mouse button: Enter
+    right click:
+    - Shift+Space
+    - Shift+Enter
+    right mouse button:
+    - Shift+Space
+    - Shift+Enter
     right mouse button (w/o overlay): null
     show overlay: Cmd+Shift+Opt+Space tap
     subgrid nudge down:
@@ -337,7 +342,7 @@ keymaps:
     toggle continuous mode: null
     toggle continuous mode until closed: '1'
     toggle free mode:
-    - OptionLeft double tap
+    - Cmd+Opt+Ctrl+Space tap
     - Cmd+Shift+Opt+m tap
     toggle overlay: null
     toggle overlay lock: null
@@ -473,9 +478,9 @@ style_configs:
   - 1.0
   - 0.5
   subgrid_text_rgba:
-  - 1
-  - 1
-  - 1
+  - 1.0
+  - 1.0
+  - 1.0
   - 0.1
   text_rgba:
   - 1.0
