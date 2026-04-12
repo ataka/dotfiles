@@ -157,11 +157,11 @@ LEADER = =Ctrl q=
 
 =Control + Shift + Command=
 
-| Key       | Feature            | Type |
-|-----------+--------------------+------|
-| =⌃ ⇧ ⌘ a= | Authors            |      |
-| =⌃ ⇧ ⌘ c= | Copy Symbol Name   | Edit |
-| =⌃ ⇧ ⌘ h= | Find Call Hierachy | Find |
+| Key       | Feature             | Type |
+|-----------+---------------------+------|
+| =⌃ ⇧ ⌘ a= | Authors             |      |
+| =⌃ ⇧ ⌘ c= | Copy Symbol Name    | Edit |
+| =⌃ ⇧ ⌘ h= | Find Call Hierarchy | Find |
 
 =Control + Option + Shiftt + Command=
 
