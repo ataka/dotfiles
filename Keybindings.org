@@ -91,6 +91,13 @@
 | =⌥ ⇧ ⌘ m=     | Mouseless free mode 起動          | Mouseless |
 | =⌥ ⇧ ⌘ y=     | PastePal (Clipboard History) 起動 | PastePal  |
 
+** =Control + Option + Shift + Command=
+
+| Key         | Feature              | App      |
+|-------------+----------------------+----------|
+| =⌃ ⌥ ⇧ ⌘ p= | PastePal Stack Paste | PastePal |
+
+
 * Application Specified Keybindings
 
 ** HomeRow
