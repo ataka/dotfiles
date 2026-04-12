@@ -6,17 +6,106 @@ return {
     -- カスタム設定
     {
       -- タブの名前変更
+      -- Copied from https://github.com/mozumasu/dotfiles/blob/main/.config/wezterm/keymaps.lua#L208-L234
       key = 'e',
       mods = 'LEADER',
+      action = wezterm.action_callback(function(window, pane)
+        local tab = pane:tab()
+        local tab_id = tab:tab_id()
+        local tab_module = require("tab")
+        local current = tab_module.custom_title[tab_id] or ""
+        window:perform_action(
+          act.PromptInputLine({
+            description = "(wezterm) Rename tab (empty to reset):",
+            initial_value = current,
+            action = wezterm.action_callback(function(_, inner_pane, line)
+              if line == nil then return end
+              local t = inner_pane:tab()
+              if line == "" then
+                tab_module.custom_title[t:tab_id()] = nil
+              else
+                tab_module.custom_title[t:tab_id()] = line
+              end
+            end),
+          }),
+        pane
+      )
+      end),
+    },
+    -- Workspace
+    -- Switch or Create Workspace
+    {
+      key = 'W',
+      mods = 'LEADER',
+      action = act.ShowLauncherArgs { flags = 'WORKSPACES' , title = "Select workspace" },
+    },
+    -- Rename workspace
+    {
+      key = 'r',
+      mods = 'LEADER',
       action = act.PromptInputLine {
-        description = 'Enter new name for tab',
-        action = wezterm.action_callback(function(window, pane, line)
+        description = 'Rename workspace title:',
+        action = wezterm.action_callback(function(win,pane,line)
           if line then
-            window:active_tab():set_title(line)
+            wezterm.mux.rename_workspace(
+              wezterm.mux.get_active_workspace(),
+              line
+            )
           end
         end),
       },
     },
+    -- Create Workspace with name
+    -- Copied from https://zenn.dev/sankantsu/articles/e713d52825dbbb#%E5%90%8D%E5%89%8D%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%A6-workspace-%E3%82%92%E4%BD%9C%E6%88%90
+    {
+      key = 'c',
+      mods = 'LEADER',
+      action = act.PromptInputLine {
+        description = "Create new workspace:",
+        action = wezterm.action_callback(function(window, pane, line)
+          if line then
+            window:perform_action(
+              act.SwitchToWorkspace {
+                name = line,
+              },
+              pane
+            )
+          end
+        end),
+      },
+    },
+    -- Switch Workspace
+    -- Copied from https://zenn.dev/sankantsu/articles/e713d52825dbbb#workspace-%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88%E3%81%8B%E3%82%89%E9%81%B8%E6%8A%9E%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%92%E7%B5%84%E3%81%BF%E3%81%9F%E3%81%A6%E3%82%8B
+    {
+      key = 'w',
+      mods = 'LEADER',
+      action = wezterm.action_callback (function (win, pane)
+        -- workspace のリストを作成
+        local workspaces = {}
+        for i, name in ipairs(wezterm.mux.get_workspace_names()) do
+          table.insert(workspaces, {
+            id = name,
+            label = string.format("%d. %s", i, name),
+          })
+        end
+        local current = wezterm.mux.get_active_workspace()
+        -- 選択メニューを起動
+        win:perform_action(act.InputSelector {
+          action = wezterm.action_callback(function (_, _, id, label)
+            if not id and not label then
+              wezterm.log_info "Workspace selection canceled"  -- 入力が空ならキャンセル
+            else
+              win:perform_action(act.SwitchToWorkspace { name = id }, pane)  -- workspace を移動
+            end
+          end),
+          title = "Select workspace",
+          choices = workspaces,
+          fuzzy = true,
+          -- fuzzy_description = string.format("Select workspace: %s -> ", current), -- requires nightly build
+        },
+      pane)
+    end),
+  },
     -- Tab
     { key = 'Tab', mods = 'CTRL', action = act.ActivateTabRelative(1) },
     { key = 'Tab', mods = 'SHIFT|CTRL', action = act.ActivateTabRelative(-1) },
@@ -28,11 +117,14 @@ return {
     { key = '0', mods = 'LEADER', action = act({ CloseCurrentPane = { confirm = true } }) },
     { key = 'o', mods = 'LEADER', action = act.ActivatePaneDirection('Next') },
     { key = 'O', mods = 'LEADER', action = act.ActivatePaneDirection('Prev') },
-    { key = 'Tab', mods = 'ALT', action = act.ActivatePaneDirection('Next') },
-    { key = 'Tab', mods = 'SHIFT|ALT', action = act.ActivatePaneDirection('Prev') },
+    { key = 'o', mods = 'ALT', action = act.ActivatePaneDirection('Next') },
+    { key = 'o', mods = 'SHIFT|ALT', action = act.ActivatePaneDirection('Prev') },
     -- Scroll to Prompt - https://wezterm.org/config/lua/keyassignment/ScrollToPrompt.html#scrolltoprompt
     { key = 'UpArrow', mods = 'SHIFT', action = act.ScrollToPrompt(-1) },
     { key = 'DownArrow', mods = 'SHIFT', action = act.ScrollToPrompt(1) },
+    -- Copy Mode
+    { key = '[', mods = 'LEADER', action = act.ActivateCopyMode },
+    { key = ']', mods = 'LEADER', action = act.PasteFrom 'Clipboard' },
     -- オリジナル設定
 --    { key = 'Enter', mods = 'ALT', action = act.ToggleFullScreen },
     { key = '!', mods = 'CTRL', action = act.ActivateTab(0) },
@@ -174,6 +266,11 @@ return {
 
   key_tables = {
     copy_mode = {
+      { key = 'a', mods = 'NONE', action = act.CopyMode 'MoveToStartOfLine' },
+      { key = 'e', mods = 'NONE', action = act.CopyMode 'MoveToEndOfLineContent' },
+      { key = 'n', mods = 'NONE', action = act.CopyMode 'MoveDown' },
+      { key = 'p', mods = 'NONE', action = act.CopyMode 'MoveUp' },
+      -- Original Settings
       { key = 'Tab', mods = 'NONE', action = act.CopyMode 'MoveForwardWord' },
       { key = 'Tab', mods = 'SHIFT', action = act.CopyMode 'MoveBackwardWord' },
       { key = 'Enter', mods = 'NONE', action = act.CopyMode 'MoveToStartOfNextLine' },
@@ -207,7 +304,7 @@ return {
       { key = 'b', mods = 'CTRL', action = act.CopyMode 'PageUp' },
       { key = 'c', mods = 'CTRL', action = act.CopyMode 'Close' },
       { key = 'd', mods = 'CTRL', action = act.CopyMode{ MoveByPage = (0.5) } },
-      { key = 'e', mods = 'NONE', action = act.CopyMode 'MoveForwardWordEnd' },
+--      { key = 'e', mods = 'NONE', action = act.CopyMode 'MoveForwardWordEnd' },
       { key = 'f', mods = 'NONE', action = act.CopyMode{ JumpForward = { prev_char = false } } },
       { key = 'f', mods = 'ALT', action = act.CopyMode 'MoveForwardWord' },
       { key = 'f', mods = 'CTRL', action = act.CopyMode 'PageDown' },

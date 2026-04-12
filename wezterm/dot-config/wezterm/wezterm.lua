@@ -45,6 +45,30 @@ wezterm.on('window-focus-changed', function(window, _)
   window:set_config_overrides(overrides)
 end)
 
+-- ワークスペース
+local SOLID_LEFT_CIRCLE = wezterm.nerdfonts.ple_left_half_circle_thick
+local SOLID_RIGHT_CIRCLE = wezterm.nerdfonts.ple_right_half_circle_thick
+
+wezterm.on('update-status', function(window, pane)
+  local background = "#ef9f76" -- catppuccin.frappe.peach
+  local foreground = "#232634" -- catppuccin.frappe.crust
+  local edge_background = "none"
+  local edge_foreground = background
+
+  local workspace = window:active_workspace()
+  window:set_left_status(wezterm.format {
+    { Background = { Color = edge_background } },
+    { Foreground = { Color = edge_foreground } },
+    { Text = SOLID_LEFT_CIRCLE },
+    { Background = { Color = background } },
+    { Foreground = { Color = foreground } },
+    { Text = ' ' .. workspace .. ' ' },
+    { Background = { Color = edge_background } },
+    { Foreground = { Color = edge_foreground } },
+    { Text = SOLID_RIGHT_CIRCLE }
+  })
+end)
+
 -- タブバー
 -- タイトルバーを非表示
 config.window_decorations = "RESIZE"
@@ -52,8 +76,8 @@ config.window_decorations = "RESIZE"
 config.show_tabs_in_tab_bar = true
 -- タブバーを下に配置する
 config.tab_bar_at_bottom = true
--- タブが一つの時は非表示
-config.hide_tab_bar_if_only_one_tab = true
+-- タブが一つの時でも非表示にしない
+-- config.hide_tab_bar_if_only_one_tab = true
 -- falseにするとタブバーの透過が効かなくなる
 -- config.use_fancy_tab_bar = false
 
