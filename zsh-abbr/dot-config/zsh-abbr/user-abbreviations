@@ -1,2 +1,6 @@
 abbr lt='eza --group-directories-first --icons --no-user --tree '
 abbr lt3='eza --git-ignore --group-directories-first --icons --no-user --tree --level=3'
+# Change Worktree working directory
+abbr cw='cd $(git-preview-worktree)'
+# Change directory to project Root
+abbr cr='cd $(git rev-parse --show-toplevel)'
