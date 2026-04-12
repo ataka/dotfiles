@@ -111,6 +111,16 @@
 
 ** HomeRow
 
+*** Click Mode
+
+| Key           | Feature        | Type |
+|---------------+----------------+------|
+| =Space=       | 左クリック     |      |
+| =Return=      | 左クリック     |      |
+| =⇧ Space=     | 右クリック     |      |
+| =Space Space= | ダブルクリック |      |
+| =?=           | ヘルプ         |      |
+
 *** Scroll Mode
 
 | Key | Feature        | Type |
@@ -163,6 +173,21 @@ LEADER = =Ctrl q=
 
 
 ** Xcode
+
+=Command=
+
+| Key   | Feature                     | Type |
+|-------+-----------------------------+------|
+| =⌘ 1= | Navigators > Project        | View |
+| =⌘ 2= | Navigators > Source Control | View |
+| =⌘ 3= | Navigators > Bookmarks      | View |
+| =⌘ 4= | Navigators > Finds          | View |
+| =⌘ 5= | Navigators > Issues         | View |
+| =⌘ 6= | Navigators > Tests          | View |
+| =⌘ 7= | Navigators > Debug          | View |
+| =⌘ 8= | Navigators > Breakpoints    | View |
+| =⌘ 9= | Navigators > Reports        | View |
+|       |                             |      |
 
 =Control + Command=
 
