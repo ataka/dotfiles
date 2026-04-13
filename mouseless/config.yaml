@@ -281,10 +281,8 @@ keymaps:
     decrease overlay opacity: ArrowDown
     edit config: Tab
     enter free mode: null
-    execute mouse action:
-    - Space
-    - Enter
-    execute mouse move: OptionLeft double tap
+    execute mouse action: Space
+    execute mouse move: null
     exit free mode: Escape
     forward click: null
     forward mouse button: null
@@ -296,32 +294,38 @@ keymaps:
     hold for middle button: null
     hold for move: Shift+Tab
     hold for right button: null
-    hold for speed decrease: I
-    hold for speed increase: A
+    hold for speed decrease:
+    - L
+    - '"'
+    hold for speed increase:
+    - F
+    - Y
     increase overlay opacity: ArrowUp
     jump to bottom: null
     jump to left edge: null
     jump to right edge: null
     jump to top: null
-    left mouse button:
-    - Space
-    - Enter
+    left mouse button: Space
     left mouse button (w/o overlay): null
     middle click: null
     middle mouse button: null
     middle mouse button (w/o overlay): null
-    move down: T
-    move left: H
-    move right: N
-    move up: C
+    move down:
+    - T
+    - E
+    move left:
+    - H
+    - O
+    move right:
+    - N
+    - U
+    move up:
+    - C
+    - .
     release hold/drag: Escape
     repeat last mouse action: null
-    right click:
-    - Shift+Space
-    - Shift+Enter
-    right mouse button:
-    - Shift+Space
-    - Shift+Enter
+    right click: Enter
+    right mouse button: Enter
     right mouse button (w/o overlay): null
     show overlay: Cmd+Shift+Opt+Space tap
     subgrid nudge down:
@@ -347,11 +351,17 @@ keymaps:
     toggle overlay: null
     toggle overlay lock: null
     undo last key: Backspace
-    wheel down: E
+    wheel down:
+    - R
+    - <
     wheel down fast: null
-    wheel left: O
+    wheel left:
+    - D
+    - A
     wheel left fast: null
-    wheel right: U
+    wheel right:
+    - S
+    - I
     wheel right fast: null
     wheel step down: null
     wheel step down large: null
@@ -361,7 +371,9 @@ keymaps:
     wheel step right large: null
     wheel step up: null
     wheel step up large: null
-    wheel up: .
+    wheel up:
+    - G
+    - P
     wheel up fast: null
   name: mac
 monitor_assignment_mode: auto
