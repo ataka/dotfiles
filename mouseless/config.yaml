@@ -1,4 +1,4 @@
-app_version: 0.5.0-preview.1
+app_version: 1.0.0-preview.1
 behavior_configs:
 - base_move_speed: 5.0
   base_wheel_speed: 16.0
@@ -22,9 +22,17 @@ behavior_configs:
   wheel_step_size_large: 500.0
 classname: AppConfig
 custom_monitor_assignments: []
+custom_mouse_scaling: 1.0
+custom_mouse_screen_offset_scaling: 1.0
+custom_overlay_scaling: 1.0
 debug_options: {}
 display_input: none
 event_tap_location: hid_head
+general_settings:
+  automatically_check_for_updates: true
+  check_for_preview_releases: true
+  hide_welcome_screen: true
+  ignore_update_to_version: null
 grid_configs:
 - always_show_subgrid: false
   grid_defn:
@@ -271,6 +279,7 @@ keymaps:
     back click: null
     back mouse button: null
     back mouse button (w/o overlay): null
+    clear keyboard state: null
     close UI element: Escape
     cycle click count: null
     cycle font: '3'
@@ -284,6 +293,7 @@ keymaps:
     execute mouse action: Space
     execute mouse move: null
     exit free mode: Escape
+    force overlay resize: null
     forward click: null
     forward mouse button: null
     forward mouse button (w/o overlay): null
@@ -301,6 +311,7 @@ keymaps:
     - F
     - Y
     increase overlay opacity: ArrowUp
+    invert colors: null
     jump to bottom: null
     jump to left edge: null
     jump to right edge: null
@@ -376,8 +387,12 @@ keymaps:
     - P
     wheel up fast: null
   name: mac
+log_level: info
 monitor_assignment_mode: auto
+mouse_scaling: auto
+mouse_screen_offset_scaling: auto
 name: ''
+overlay_scaling: auto
 style_configs:
 - always_on_subgrid_rgba:
   - 1.0
