@@ -86,6 +86,7 @@ install-cui: install-bat
 	brew install fzf
 	brew install fastfetch
 	brew install gh
+	brew install git
 	brew install git-delta
 	brew install git-filter-repo
 	brew install gnuplot
