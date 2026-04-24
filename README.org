@@ -390,6 +390,25 @@ https://github.com/mad-p/MacTcode/
   sudo cp -r MacTcode.app /Library/Input\ Methods/
 #+end_src
 
+** Raycast
+
+ランチャーアプリ
+
+*** 利用している Extension
+
+**** 標準
+
+- Clipboard History
+- Navigation / Search Menu Items
+- QUicklinks
+
+**** サードパーティー
+
+- Kill Process
+- Quit Applications
+- Toggl Track
+- Zoom
+
 ** GNU Screen
 
 - =.screenrc=
