@@ -255,6 +255,13 @@ esc = 'mode main'
 9 = ['resize width 1008', 'mode main'] # 2/3
 0 = ['resize width 1134', 'mode main'] # 3/4
 
+# 2560 -- WQHD Display
+quote  = ['resize width  640', 'mode main'] # 1/4
+comma  = ['resize width  853', 'mode main'] # 1/3
+period = ['resize width 1280', 'mode main'] # 1/2
+p      = ['resize width 1706', 'mode main'] # 2/3
+y      = ['resize width 1920', 'mode main'] # 3/4
+
 [mode.vertical.binding]
 esc = 'mode main'
 
@@ -272,6 +279,12 @@ esc = 'mode main'
 9 = ['resize width   654', 'mode main'] # 2/3
 0 = ['resize width   735', 'mode main'] # 3/4
 
+# 1440 -- WQHD Display
+quote  = ['resize height  360', 'mode main'] # 1/4
+comma  = ['resize height  480', 'mode main'] # 1/3
+period = ['resize height  720', 'mode main'] # 1/2
+p      = ['resize height  960', 'mode main'] # 2/3
+y      = ['resize height 1080', 'mode main'] # 3/4
 
 [mode.aerospace-specified.binding]
 esc = 'mode main'
