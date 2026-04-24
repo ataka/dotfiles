@@ -305,11 +305,11 @@ keymaps:
     hold for move: Shift+Tab
     hold for right button: null
     hold for speed decrease:
-    - L
-    - '"'
+    - A
+    - S
     hold for speed increase:
-    - F
-    - Y
+    - D
+    - I
     increase overlay opacity: ArrowUp
     invert colors: null
     jump to bottom: null
@@ -367,12 +367,12 @@ keymaps:
     - <
     wheel down fast: null
     wheel left:
-    - D
-    - A
+    - F
+    - '"'
     wheel left fast: null
     wheel right:
-    - S
-    - I
+    - L
+    - Y
     wheel right fast: null
     wheel step down: null
     wheel step down large: null
