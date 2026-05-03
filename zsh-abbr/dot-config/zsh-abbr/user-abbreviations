@@ -4,3 +4,5 @@ abbr lt3='eza --git-ignore --group-directories-first --icons --no-user --tree --
 abbr cw='cd $(git-preview-worktree)'
 # Change directory to project Root
 abbr cr='cd $(git rev-parse --show-toplevel)'
+# Wezterm imgcat
+abbr wimgcat='wezterm imgcat'
