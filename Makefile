@@ -106,6 +106,7 @@ install-cui: install-bat
 	brew install tldr
 	brew install tmux
 	brew install tree
+	brew install weasyprint
 	brew install zoxide
 	brew install zsh
 	brew install zsh-autosuggestions
